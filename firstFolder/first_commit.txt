@@ -1,0 +1,6 @@
+#hello github
+#Name: Neil Grover
+#Major: Computer Science
+
+This is my first commit.
+Hoping to keep posting my projects here!
