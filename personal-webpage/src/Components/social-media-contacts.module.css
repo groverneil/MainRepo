@@ -1,0 +1,55 @@
+.sm_container {
+
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    gap: 2%;
+    box-shadow: 0px 2px 2px 0px;
+}
+
+
+div .heading {
+
+    width: 15vw;
+    font-weight: 200;
+    font-size: 2vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+div .name {
+
+    width: 20vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+div .pic {
+
+    width: 5vw;
+    display: flex;
+    align-items: center;
+    padding: 20% 0;
+}
+
+div .copy {
+
+    width: 10vw;
+}
+
+.copy {
+
+    transition: transform 0.2 sec;
+}
+
+.copy:hover {
+
+    transform: scale(1.1);
+    background-color: blue;
+    color: aliceblue;
+}
