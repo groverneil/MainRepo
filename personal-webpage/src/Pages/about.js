@@ -10,6 +10,9 @@ function About(){
 
     return (
 
+        // This contains all my social media contact informations.
+        // We use a simple card based container to display the social media contacts.
+
         <div>
             <h1>Contact Information</h1>
             <NavigationBar/>
