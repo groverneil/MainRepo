@@ -60,7 +60,7 @@ div.navig ul li a:hover {
 
 div.main-container {
 
-  width: 95%;
+  width: 94%;
   background-color: rgb(253, 242, 228);
   text-align: left;
   margin: 2.5%;
@@ -96,6 +96,7 @@ div.content_container_proj {
   font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
   padding-left: 3%;
+  margin-right: 2%;
 }
 
 div.image-container {
@@ -111,6 +112,8 @@ div.image-container_proj {
   width: 60%;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  margin: 2%;
 
 }
 
@@ -119,12 +122,22 @@ div.image-container img {
   width: 25vw;
 }
 
+div.image-container_proj img:hover {
+
+  transform: scale(1.1);
+  transition: 0.7s ease-in-out;
+}
+
 div.image-container_proj img {
 
   height: auto;
   width: 50vw;
   padding: 2% 0;
 }
+
+
+
+
 
 @media (max-width: 1024px) {
 
@@ -140,14 +153,21 @@ div.image-container_proj img {
 
   div.content_container {
 
-    width: 80%;
+    width: 90%;
+  }
+
+  div.image-container_proj {
+
+    width: 100%;
   }
 
   div.image-container_proj img{
 
     width: 80vw;
+    height: auto;
     padding-bottom: 2vw;
   }
+
 
   div.content_container_proj {
 

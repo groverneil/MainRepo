@@ -4,6 +4,7 @@ import LinkedInPic from '../Pics/LinkedIn-icon.png'
 import GmailLogo from '../Pics/Gmail-logo.png'
 import HandshakeLogo from '../Pics/handshake-logo.png'
 import DiscordLogo from '../Pics/Discord-logo.png'
+import GitLogo from '../Pics/gitlogo.png'
 
 function About(){
 
@@ -16,6 +17,7 @@ function About(){
             <SocialContact pic = {LinkedInPic} platform = "LinkedIn" pltname = "Neil Grover"/>
             <SocialContact pic = {HandshakeLogo} platform = "Handshake" pltname = "Neil Grover"/>
             <SocialContact pic = {DiscordLogo} platform = "Discord" pltname = "ElvisJohn9"/>
+            <SocialContact pic = {GitLogo} platform = "Github" pltname = "groverneil"/>
         </div>
     );
 }
