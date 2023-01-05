@@ -49,6 +49,7 @@ div .copy {
     background-color: lightblue;
     animation: outHover;
     animation-duration: 1s;
+    border-radius: 50px;
     height: 4vh;
 }
 
@@ -62,13 +63,31 @@ div .copy {
 
 @keyframes inHover {
 
-    to {scale: 1.2; background-color: aquamarine;}
+    to {scale: 1.1; background-color: aquamarine;}
 }
 
 @keyframes outHover {
 
     to {scale: 1;}
     
+}
+
+@media (max-width: 1024px) {
+
+    div .heading {
+
+        display: none;
+    }
+
+    div .name {
+
+        font-size: 2vw;
+    }
+
+    div .copy {
+
+        width: 15vw;
+    }
 }
 
 
