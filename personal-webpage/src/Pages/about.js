@@ -3,7 +3,6 @@ import SocialContact from "../Components/social-media-contacts";
 import LinkedInPic from '../Pics/LinkedIn-icon.png'
 import GmailLogo from '../Pics/Gmail-logo.png'
 import HandshakeLogo from '../Pics/handshake-logo.png'
-import DiscordLogo from '../Pics/Discord-logo.png'
 import GitLogo from '../Pics/gitlogo.png'
 
 function About(){
@@ -16,11 +15,10 @@ function About(){
         <div>
             <h1>Contact Information</h1>
             <NavigationBar/>
-            <SocialContact pic = {GmailLogo} platform = "Gmail" pltname= "groverneil25" />
-            <SocialContact pic = {LinkedInPic} platform = "LinkedIn" pltname = "Neil Grover"/>
-            <SocialContact pic = {HandshakeLogo} platform = "Handshake" pltname = "Neil Grover"/>
-            <SocialContact pic = {DiscordLogo} platform = "Discord" pltname = "ElvisJohn9"/>
-            <SocialContact pic = {GitLogo} platform = "Github" pltname = "groverneil"/>
+            <SocialContact pic = {GmailLogo} platform = "Gmail" pltname= "groverneil25" link = "mailto:groverneil25@gmail.com"/>
+            <SocialContact pic = {LinkedInPic} platform = "LinkedIn" pltname = "Neil Grover" link = "https://www.linkedin.com/in/neil-grover-29678119a"/>
+            <SocialContact pic = {HandshakeLogo} platform = "Handshake" pltname = "Neil Grover" link = "https://app.joinhandshake.com/stu/users/33540151?ref=user-show-discover-students"/>
+            <SocialContact pic = {GitLogo} platform = "Github" pltname = "groverneil" link = "https://github.com/groverneil"/>
         </div>
     );
 }
