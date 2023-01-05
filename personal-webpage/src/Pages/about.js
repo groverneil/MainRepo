@@ -19,6 +19,8 @@ function About(){
             <SocialContact pic = {LinkedInPic} platform = "LinkedIn" pltname = "Neil Grover" link = "https://www.linkedin.com/in/neil-grover-29678119a"/>
             <SocialContact pic = {HandshakeLogo} platform = "Handshake" pltname = "Neil Grover" link = "https://app.joinhandshake.com/stu/users/33540151?ref=user-show-discover-students"/>
             <SocialContact pic = {GitLogo} platform = "Github" pltname = "groverneil" link = "https://github.com/groverneil"/>
+
+            {/* All links open in new pages */}
         </div>
     );
 }
