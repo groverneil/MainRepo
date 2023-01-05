@@ -6,6 +6,10 @@ import Projects from './Pages/projects';
 
 
 function App() {
+
+  //We define the routing for the website.
+  //This defined navigation is used by the nav.js file.
+
   return (
     <div>
       <Routes>

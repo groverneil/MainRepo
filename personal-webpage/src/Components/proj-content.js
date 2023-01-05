@@ -1,5 +1,7 @@
 function ProjectContainer(props){
 
+    //This content box is used in the projects page.
+
     return (
 
         <div className="main-container">

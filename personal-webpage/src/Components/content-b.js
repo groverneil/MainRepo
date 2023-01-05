@@ -1,6 +1,7 @@
 
 function ContentBox (props){
 
+    // This component box is gping be used on the homepage.
 
     return (
 

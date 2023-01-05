@@ -4,6 +4,8 @@ function SocialContact(props){
 
     return (
 
+        //This contains the content boxes for the Contact Me page.
+
         <div className= {classes.sm_container}>
             <div>
                 <img class = {classes.pic} src= {props.pic} alt = "Media Logo"/>
