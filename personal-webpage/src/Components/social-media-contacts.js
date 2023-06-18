@@ -16,16 +16,7 @@ function SocialContact(props){
 
         <div className= {classes.sm_container}>
             <div>
-                <img className = {classes.pic} src= {props.pic} alt = "Media Logo"/>
-            </div>
-            <div>
-                <h1 className={classes.heading}>{props.platform}</h1>
-            </div>
-            <div>
-                <p className = {classes.name} >{props.pltname}</p>
-            </div>
-            <div>
-                <button className= {classes.copy} onClick = {testClick} >Visit</button>
+                <img className = {classes.pic} src= {props.pic} alt = "Media Logo" onClick={testClick}/>
             </div>
         </div>
     )

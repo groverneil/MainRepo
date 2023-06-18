@@ -8,6 +8,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.about_main {
+
+  width: 100%;
+  display: flex;
+  background-color: rgb(48, 48, 48);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -25,6 +32,9 @@ div.navig {
   display: block;
   width: 100vw;
   border: 1px solid black;
+  position: sticky;
+  top: 0;
+  z-index: 999;
   background-color: rgb(0, 255, 255);
 }
 
@@ -80,6 +90,12 @@ div.main-container h2 {
   text-align: center;
 }
 
+#scrl1 {
+
+  width: 100vw;
+  
+}
+
 div.content_container {
 
   width: 60%;
@@ -105,6 +121,32 @@ div.image-container {
   display: flex;
   justify-content: center;
   padding: 2% 0%;
+}
+
+.twi_1 {
+
+  position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translate(-12%, -238%);
+  color: rgb(231, 255, 236);
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  font-size: 8vw;
+  margin-bottom: -9%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.twi_2 {
+
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-10%, -280%);
+  color: rgb(231, 255, 236);
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  font-size: 8vw;
+  margin-bottom: -9%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 div.image-container_proj {
@@ -134,7 +176,6 @@ div.image-container_proj img {
   width: 50vw;
   padding: 2% 0;
 }
-
 
 
 
