@@ -30,7 +30,7 @@ h1 {
 div.navig {
 
   display: block;
-  width: 100vw;
+  width: 99vw;
   border: 1px solid black;
   position: sticky;
   top: 0;
@@ -92,7 +92,7 @@ div.main-container h2 {
 
 #scrl1 {
 
-  width: 100vw;
+  width: 99vw;
   
 }
 
