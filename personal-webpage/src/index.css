@@ -6,11 +6,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 .about_main {
 
-  width: 100%;
+  width: 99vw;
   display: flex;
   background-color: rgb(48, 48, 48);
 }
@@ -70,7 +71,7 @@ div.navig ul li a:hover {
 
 div.main-container {
 
-  width: 94%;
+  width: 92%;
   background-color:rgb(240, 251, 252);
   text-align: left;
   margin: 2.5%;
