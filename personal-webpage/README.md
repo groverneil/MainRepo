@@ -14,6 +14,7 @@
     - Add the homepage path to the directory that contains the source files.
 - run the command `npm run reploy`.
 - Access the page through `https://groverneil.github.io/MainRepo`
+- ensure cache is clear to make sure that most up to date version of site is dis displayed.
 
 # Files
 
