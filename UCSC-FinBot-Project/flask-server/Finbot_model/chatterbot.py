@@ -26,8 +26,6 @@ model = NeurNet(in_size, hid_size, out_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "Sammy"
-
 def respond(sentences):
 
     response_buffer = []
