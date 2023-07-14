@@ -121,7 +121,7 @@ div.user {
     animation: fadeIn 0.5s;
     padding: 0.5vw;
     text-align: left;
-    font-size: 21px;
+    font-size: 19px;
     padding: 5vh 25vw 5vh 30vw;
     background-color: rgba(236, 232, 232, 0.638);
 }
@@ -135,7 +135,7 @@ div.chatbot {
     animation: fadeInDelay 2s;
     padding: 0.5vw;
     text-align: left;
-    font-size: 21px;
+    font-size: 19px;
     word-wrap: break-word;
     padding: 5vh 25vw 5vh 30vw;
     background-color: rgba(209, 209, 209, 0.644);
