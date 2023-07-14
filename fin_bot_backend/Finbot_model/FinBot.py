@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 
-with open("flask-server/Finbot_model/chat-gpt-intents.json", "r") as infile:
+with open("./chat-gpt-intents.json", "r") as infile:
 
     intents = json.load(infile)
 
@@ -138,7 +138,7 @@ data = {
     "tags": tags 
 }
 
-FILE = "flask-server/Finbot_model/dat.pth"
+FILE = "./dat.pth"
 
 torch.save(data, FILE)
 
