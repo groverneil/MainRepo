@@ -1,0 +1,1 @@
+tree = app_commands.CommandTree(client);
