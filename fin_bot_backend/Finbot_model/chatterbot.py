@@ -7,11 +7,11 @@ import re
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-with open("flask-server/Finbot_model/chat-gpt-intents.json", "r") as f:
+with open("fin_bot_backend/Finbot_model/chat-gpt-intents.json", "r") as f:
 
     intents = json.load(f)
 
-FILE = "flask-server/Finbot_model/dat.pth"
+FILE = "fin_bot_backend/Finbot_model/dat.pth"
 
 data = torch.load(FILE)
 
