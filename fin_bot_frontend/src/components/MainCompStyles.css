@@ -1,0 +1,237 @@
+
+div.header {
+
+    display: flex;
+    width: 99.2vw;
+    align-items: center;
+    height: 100px;
+    box-shadow: 5px 5px 5px 5px rgb(205, 205, 205);
+}
+
+div.logo {
+
+    margin: auto;
+    width: 15%;
+    height: 70px;
+}
+
+div.logo img {
+
+    height: 100%;
+
+
+}
+
+div.title {
+
+    width: 55%;
+    font-family:'Times New Roman', Times, serif;
+    text-align: left;
+    font-size: 21px;
+    margin: auto;
+}
+
+div.MainFrame {
+
+    width: 95vw;
+    height: 70px;
+    display: flex; 
+    background-color:rgb(194, 196, 196);
+    padding: 2.4vw;
+    position: fixed;
+    border-radius: 0px 10px 10px 0px;
+    bottom: 0;
+}
+
+form {
+    /* This bit sets up the horizontal layout */
+    display:flex;
+    width: 90vw;
+    flex-direction:row;
+    
+    /* This bit draws the box around it */
+    border:1px solid grey;
+  
+    /* I've used padding so you can see the edges of the elements. */
+    padding:1px;
+    background-color: aliceblue;
+  }
+  
+input  {
+    border:none;
+    background-color: aliceblue;
+}
+
+input[type=text] {
+    
+    width: 90%;
+    padding: 0 2vw;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+input[type=image] {
+
+    width: 5%;
+    object-fit: contain;
+    margin: 0.5% .5%;
+}
+
+  
+  /* remove the input focus blue box, it will be in the wrong place. */
+input:focus {
+    outline: none;
+}
+  
+/* Add the focus effect to the form so it contains the button */
+form:focus-within { 
+    outline: 1px solid blue 
+}
+  
+button {
+    /* Just a little styling to make it pretty */
+    border:1px solid blue;
+    background:blue;
+    color:white;
+
+}
+  
+
+div.chatWindow {
+
+    height: 70vh;
+    width: 99.5vw;
+    margin-top: 2vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+div.displayChat {
+
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+div.user {
+    margin: 0;
+    overflow:auto;
+    width: 45vw;
+    animation: fadeIn 0.5s;
+    padding: 0.5vw;
+    text-align: left;
+    font-size: 21px;
+    padding: 5vh 25vw 5vh 30vw;
+    background-color: rgba(236, 232, 232, 0.638);
+}
+
+
+div.chatbot {
+
+    margin: 0;
+    overflow:auto;
+    width: 45vw;
+    animation: fadeInDelay 2s;
+    padding: 0.5vw;
+    text-align: left;
+    font-size: 21px;
+    word-wrap: break-word;
+    padding: 5vh 25vw 5vh 30vw;
+    background-color: rgba(209, 209, 209, 0.644);
+}
+
+div.user p {
+
+    width: 30vw;
+    float: right;
+
+}
+
+div.chatbot p {
+
+    width: 30vw;
+    float: right;
+
+}
+
+.chatIcon {
+
+    float: left;
+    flex-direction: row;
+    margin-right: 2vw;
+    display: block;
+}
+
+.chatIcon img{
+
+    width:60px;
+}
+
+.scrollDown {
+
+    display: inline;
+    float: right;
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 150px;
+    margin-right: 4vw;
+}
+
+.scrollDown button {
+    background-color: transparent;
+    border: none;
+}
+
+.scrollDown img {
+
+    width: 20px;
+}
+
+@keyframes fadeIn {
+
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeInDelay {
+
+    0% {opacity: 0}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@media only screen and (max-width: 1024px) {
+
+    div.title {
+
+        font-size: 16px;
+    }
+
+    .chatIcon img{
+
+        width:50px;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    div.title {
+
+        font-size: 2vw;
+    }
+
+    .chatIcon{
+
+        display: flex;
+        align-items: center;
+        padding-left: 33%;
+        width: 50%;
+        margin-bottom: 5%;
+    }
+    
+
+}
