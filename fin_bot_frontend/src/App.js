@@ -7,9 +7,7 @@ function App() {
   useEffect(()=> {
 
     axios.post("/reset", {}).then(
-      data => {
-        console.log("testing run")
-      }
+      data => {}
     )
     
     } ,[])
