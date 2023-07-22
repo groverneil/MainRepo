@@ -24,11 +24,11 @@
           {
             "tag": "front_counter",
             "patterns": ["front counter", "office address", "counter hours", "where are you located?", "Where is the financial aid office?"],
-            "responses": ["Our front counter is located at 05 Hahn Student Services, 1156 High Street, Santa Cruz, CA 95064. The front counter hours are 1PM-4PM Monday-Friday."]
+            "responses": ["Our front counter is located at 205 Hahn Student Services, 1156 High Street, Santa Cruz, CA 95064. The front counter hours are 1PM-4PM Monday-Friday."]
           },
           {
             "tag": "mailing_address",
-            "patterns": ["What is the mailing address of the UCSC Financial Aid Office?", "Where should I send documents to the Financial Aid Office?", "What is the postal address of the Financial Aid Office?", "What is your mailing address?", "do you have a mailing address?"],
+            "patterns": ["What is the mailing address of the UCSC Financial Aid Office?", "Where should I send documents to the Financial Aid Office?", "What is the postal address of the Financial Aid Office?", "What is your mailing address?", "do you have a mailing address?", "how can I mail documents to the office?"],
             "responses": ["You can send documents to the UCSC Financial Aid Office at the following address: UC Santa Cruz, Financial Aid and Scholarships Office, 205 Hahn Student Services, 1156 High Street, Santa Cruz, CA 95064.", "The mailing address for the Financial Aid Office is UC Santa Cruz, Financial Aid and Scholarships Office, 205 Hahn Student Services, 1156 High Street, Santa Cruz, CA 95064.", "Documents can be mailed to the Financial Aid and Scholarships Office, UC Santa Cruz, 205 Hahn Student Services, 1156 High Street, Santa Cruz, CA 95064."]
           },
           {
@@ -38,8 +38,8 @@
           },
           {
             "tag": "part_time_enrollment",
-            "patterns": ["Part-time enrollment", "Part time enrollment", "Minimum enrollment", "Official Part-Time Program", "how many credits do I need for financial aid?", "how many units are required for aid at UCSC?", "how many units do I need for financial aid?"],
-            "responses": ["UC Santa Cruz is a full-time enrollment institution, but there are circumstances where students may need to go part-time. To be approved for the Official Part-Time Program and avoid billing of partial aid, students must contact the Office of the Registrar.\n\nApproved part-time students should enroll in 6-10 credits and may receive a 50 percent reduction in tuition fee and nonresident supplemental tuition, if applicable. Please reach out to the Office of the Registrar for eligibility requirements and more information.\n\nIf a student does not enroll in the Official Part-Time Program and is enrolled in less than 12 credits on the add/drop/swap date of the quarter, they will be billed for full-time tuition and fees. In such cases, financial aid will be adjusted based on the number of credits enrolled, as per federal, state, and university grant requirements.\n\nGrant funds will be adjusted as follows:\n- 9-11 credits: 75% of the original grant amount\n- 6-8 credits: 50% of the original grant amount\n- 5 or less credits: 25% of the original Pell Grant and 0% for all other aid.\n\nPlease note that Cal Grant recipients must fulfill specific credit requirements as per AB 2248 to maintain eligibility for the Cal Grant program."]
+            "patterns": ["Part-time enrollment", "Part time enrollment", "Minimum enrollment", "Official Part-Time Program", "how many credits do I need for financial aid?", "how many units are required for aid at UCSC?", "how many units do I need for financial aid?", "What is the part time enrollment policy at UCSC?"],
+            "responses": ["UC Santa Cruz is a full-time enrollment institution, but there are circumstances where students may need to go part-time. To be approved for the Official Part-Time Program and avoid billing of partial aid, students must contact the Office of the Registrar.\nApproved part-time students should enroll in 6-10 credits and may receive a 50 percent reduction in tuition fee and nonresident supplemental tuition, if applicable. Please reach out to the Office of the Registrar for eligibility requirements and more information.\nIf a student does not enroll in the Official Part-Time Program and is enrolled in less than 12 credits on the add/drop/swap date of the quarter, they will be billed for full-time tuition and fees. In such cases, financial aid will be adjusted based on the number of credits enrolled, as per federal, state, and university grant requirements.\nGrant funds will be adjusted as follows:\n- 9-11 credits: 75% of the original grant amount\n- 6-8 credits: 50% of the original grant amount\n- 5 or less credits: 25% of the original Pell Grant and 0% for all other aid.\nPlease note that Cal Grant recipients must fulfill specific credit requirements as per AB 2248 to maintain eligibility for the Cal Grant program."]
           },
           {
             "tag": "fafsa_overview",
@@ -63,7 +63,7 @@
           },
           {
             "tag": "fafsa_documentation",
-            "patterns": ["What documents do I need to complete the FAFSA?", "Can you provide a list of required documents for the FAFSA?", "What information and paperwork should I have when filling out the FAFSA?", "What is needed to complete the fafsa?"],
+            "patterns": ["What do I need for filing the FAFSA?", "What documents do I need to complete the FAFSA?", "Can you provide a list of required documents for the FAFSA?", "What information and paperwork should I have when filling out the FAFSA?", "What is needed to complete the fafsa?"],
             "responses": ["When completing the FAFSA, you'll need your Social Security Number, driver's license (if applicable), federal income tax returns, W-2 forms, records of untaxed income, bank statements, and information about your assets. If you're a dependent student, you'll also need your parents' financial information."]
           },
           {
@@ -88,7 +88,7 @@
           },
           {
             "tag": "fafsa_dependent_vs_independent",
-            "patterns": ["What is the difference between dependent and independent students on the FAFSA?", "How does dependency status affect financial aid on the FAFSA?", "Can you explain the impact of being a dependent or independent student on the FAFSA?"],
+            "patterns": ["What is the difference between dependent and independent students on the FAFSA?", "How does dependency status affect financial aid on the FAFSA?", "Can you explain the impact of being a dependent or independent student on the FAFSA?", "How can I be considered independent for fafsa?"],
             "responses": ["The dependency status on the FAFSA determines whether you're required to provide your parents' financial information. Dependent students include most traditional undergraduate students who are typically supported by their parents financially. Independent students have additional eligibility for certain types of aid if they meet specific criteria, such as being at least 24 years old, married, a graduate student, or having legal dependents.\nA list of all of the criteria can be found at https://studentaid.gov/apply-for-aid/fafsa/filling-out/dependency"]
           },
           {
@@ -238,12 +238,12 @@
 
             "tag" : "CDAFAQ3",
             "patterns" : ["What is the difference between the FAFSA and the California Dream Act application?", "Should I apply for CADAA or FAFSA?", "Should I apply for CADAA or FAFSA?"],
-            "responses" : ["Students should only complete one of the applications (not both), according to the citizenship requirements below:  1.You are eligible to complete the FAFSA at www.fafsa.ed.gov if you are a: •U.S Citizen •Permanent Resident •Eligible non-citizen •T Visa holder 2.You are eligible to complete the CADAA at https://dream.csac.ca.gov if you are: •Undocumented •Have a valid or expired DACA •U Visa holders •Have Temporary Protected Status (TPS) •Meet the non-resident exemption requirements under AB 540, SB 2000, SB 68"]
+            "responses" : ["Students should only complete one of the applications (not both), according to the citizenship requirements below:\n1.You are eligible to complete the FAFSA at www.fafsa.ed.gov if you are either a: \n•U.S Citizen •Permanent Resident •Eligible non-citizen •T Visa holder \n\n2.You are eligible to complete the CADAA at https://dream.csac.ca.gov if you are: \n•Undocumented •Have a valid or expired DACA •U Visa holders •Have Temporary Protected Status (TPS) •Meet the non-resident exemption requirements under AB 540, SB 2000, SB 68"]
 
           } ,
           {
             "tag": "satisfactory_academic_progress",
-            "patterns": ["Satisfactory Academic Progress", "SAP policy", "GPA requirement for SAP", "Academic pace requirement"],
+            "patterns": ["Satisfactory Academic Progress", "SAP policy", "GPA requirement for SAP", "Academic pace requirement", "what is SAP?", "I have a SAP hold on my account"],
             "responses": ["To maintain Satisfactory Academic Progress (SAP) at UCSC, students are required to meet both the GPA requirement of 2.0 or above and the academic pace requirement. The academic pace requirement refers to the minimum completion rate or pace at which students must progress towards their degree. At UCSC, the minimum academic pace is typically measured by the percentage of completed credits or units compared to attempted credits or units. It is important to review the official SAP policy provided by the UCSC Financial Aid Office for comprehensive details on the academic pace requirement, including the specific completion rate and any other criteria applicable to your academic program."]
           },          
           {
@@ -298,7 +298,7 @@
           },
           {
             "tag": "global_learning_programs",
-            "patterns": ["Financial aid for study abroad", "Financial aid for global learning programs", "Financial aid while abroad", "Estimate for program financial aid package"],
+            "patterns": ["Financial aid for study abroad", "Financial aid for global learning programs", "Financial aid while abroad", "How can I get financial aid for study Abroad?"],
             "responses": ["If you receive Financial Aid, your financial aid package goes with you abroad or away and is redesigned to meet program costs. Regardless of where you go in the U.S. or the world, on a UC Global Learning program, you could receive the same percentage of financial aid that you receive for attending UC Santa Cruz.\n\nTo request a financial aid estimate for a program financial aid package before applying to the program, you can follow these steps:\n\n1. Download and complete the Estimate Request Form.\n2. Attach the completed form to an email addressed to the UCSC Financial Aid and Scholarship Office at finaid.specialprograms@ucsc.edu.\n3. Allow up to four weeks for the estimate request to be processed.\n\nFor financial aid advising related to global learning programs, you can visit the UCSC Financial Aid and Scholarships website for Study Abroad and Away Students. If you have specific questions about financial aid on global learning programs, you can email finaid.specialprograms@ucsc.edu."]
           },
           {
