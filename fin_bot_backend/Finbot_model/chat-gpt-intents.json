@@ -48,7 +48,7 @@
           },
           {
             "tag": "fafsa_eligibility",
-            "patterns": ["Who is eligible to submit the FAFSA?", "Am I eligible to apply for the FAFSA?", "What are the eligibility requirements for the FAFSA?"],
+            "patterns": ["Who is eligible to submit the FAFSA?", "Am I eligible to apply for the FAFSA?", "What are the eligibility requirements for the FAFSA?", "what is the eligibility criteria for filing the fafsa?"],
             "responses": ["To be eligible to submit the FAFSA, you must be a U.S. citizen, a U.S. national, or an eligible non-citizen. You must also have a high school diploma or equivalent, be enrolled or accepted in an eligible degree or certificate program, and have a valid Social Security Number."]
           },
           {
@@ -68,7 +68,7 @@
           },
           {
             "tag": "fafsa_dependent_independent",
-            "patterns": ["Am I considered a dependent or independent student for the FAFSA?", "How do I determine if I'm a dependent or independent student on the FAFSA?", "What factors determine my dependency status on the FAFSA?", "Dependency status for the FAFSA", "what are the requirements to be considered as independent for the fafsa?"],
+            "patterns": ["Am I considered a dependent or independent student for the FAFSA?", "How do I determine if I'm a dependent or independent student on the FAFSA?", "What factors determine my dependency status on the FAFSA?", "Dependency status for the FAFSA", "How can I be considered independent for the fafsa?"],
             "responses": ["The FAFSA uses specific criteria to determine whether you're considered a dependent or independent student. Factors such as your age, marital status, enrollment in graduate school, military service, and legal dependents affect your dependency status. The FAFSA form will guide you through the questions to determine your appropriate status.\nPlease consult https://studentaid.gov/apply-for-aid/fafsa/filling-out/dependency when determining your dependency status."]
           },
           {
@@ -210,16 +210,6 @@
             "responses": ["To be eligible for financial aid during UCSC Summer Session, you generally need to enroll in a minimum of 6 units. This limit applies cummalatively to Session I and Session II. Enrolling in less than 6 units may affect your financial aid eligibility. However, it's always best to check with the UCSC Financial Aid Office for specific information regarding your situation."]
           },
           {
-            "tag": "summer_aid_maximum",
-            "patterns": ["Is there a maximum amount of financial aid I can receive for UCSC Summer Session?", "What is the maximum financial aid available for summer at UCSC?", "Are there any limits to the amount of aid I can receive during UCSC Summer Session?", "how can I maximize my aid for summer?"],
-            "responses": ["Yes, there is a maximum amount of financial aid available for UCSC Summer Session. The maximum aid is typically provided for a combined total of 10 units between Session I and Session II. Enrolling in more than 10 units does not increase the amount of financial aid. It's important to plan your course load accordingly and be aware of the maximum aid limit."]
-          },
-          {
-            "tag": "summer_aid_tuition_cap",
-            "patterns": ["Is financial aid and tuition capped at 10 units for UCSC Summer Session?", "Are there any restrictions on financial aid and tuition beyond 10 units during summer at UCSC?", "Does enrolling in more than 10 units affect financial aid and tuition for UCSC Summer Session?"],
-            "responses": ["Yes, financial aid and tuition for UCSC Summer Session is capped at 10 units. This means that the maximum amount of financial aid and tuition charges apply to enrollment up to 10 units. Enrolling in additional units beyond 10 will not result in an increase in tuition or financial aid. It's important to be aware of this limit and plan your summer enrollment accordingly."]
-          },
-          {
             "tag": "summer_aid_housing",
             "patterns": ["Does financial aid for UCSC Summer Session cover housing?", "Can I use financial aid to pay for housing during UCSC Summer Session?", "Are there specific funds available for housing through financial aid during summer at UCSC?"],
             "responses": ["Generally, financial aid for UCSC Summer Session does not cover housing expenses. However, if you receive an excess amount of aid after tuition and other university charges have been paid, you can use those funds to help with housing expenses. It's important to manage your finances wisely and use any excess aid for education-related expenses, including housing, if needed."]
@@ -239,11 +229,10 @@
             "tag" : "CDAFAQ3",
             "patterns" : ["What is the difference between the FAFSA and the California Dream Act application?", "Should I apply for CADAA or FAFSA?", "Should I apply for CADAA or FAFSA?"],
             "responses" : ["Students should only complete one of the applications (not both), according to the citizenship requirements below:\n1.You are eligible to complete the FAFSA at www.fafsa.ed.gov if you are either a: \n•U.S Citizen •Permanent Resident •Eligible non-citizen •T Visa holder \n\n2.You are eligible to complete the CADAA at https://dream.csac.ca.gov if you are: \n•Undocumented •Have a valid or expired DACA •U Visa holders •Have Temporary Protected Status (TPS) •Meet the non-resident exemption requirements under AB 540, SB 2000, SB 68"]
-
           } ,
           {
             "tag": "satisfactory_academic_progress",
-            "patterns": ["Satisfactory Academic Progress", "SAP policy", "GPA requirement for SAP", "Academic pace requirement", "what is SAP?", "I have a SAP hold on my account"],
+            "patterns": ["SAP", "Satisfactory Academic Progress", "I have a SAP hold"],
             "responses": ["To maintain Satisfactory Academic Progress (SAP) at UCSC, students are required to meet both the GPA requirement of 2.0 or above and the academic pace requirement. The academic pace requirement refers to the minimum completion rate or pace at which students must progress towards their degree. At UCSC, the minimum academic pace is typically measured by the percentage of completed credits or units compared to attempted credits or units. It is important to review the official SAP policy provided by the UCSC Financial Aid Office for comprehensive details on the academic pace requirement, including the specific completion rate and any other criteria applicable to your academic program."]
           },          
           {
@@ -272,29 +261,9 @@
             "responses": ["Federal subsidized loans and unsubsidized loans both offer financial assistance for students, but there are important differences to note:\n\n- Subsidized Loans: These loans are need-based, and the government pays the interest while you are in school at least half-time, during grace periods, and during deferment periods. You must demonstrate financial need to qualify for a subsidized loan.\n\n- Unsubsidized Loans: Unlike subsidized loans, unsubsidized loans are not need-based, meaning they are available regardless of financial need. However, you are responsible for paying all interest that accrues on an unsubsidized loan, including while you are in school.\n\nIt's important to carefully consider your financial situation and review the terms and conditions of each loan type before making a decision. You can find more detailed information on subsidized and unsubsidized loans at [studentaid.gov/sub-vs-unsub](https://studentaid.gov/understand-aid/types/loans/subsidized-unsubsidized)."]
           },
           {
-            "tag": "newly_admitted_appeal",
-            "patterns": ["When can newly admitted students appeal for financial aid?", "What options do newly admitted students have for appealing their financial aid?", "Can newly admitted students request a financial aid estimate before committing to UC Santa Cruz?", "Do i need to commit to UCSC before appealing my financial aid?"],
-            "responses": ["Newly admitted students cannot formally appeal until after committing to UC Santa Cruz. However, if you have the necessary information, you can contact the financial aid office for an updated estimate. They will require your adjusted gross income estimate, updated wages for each parent, information about untaxed income, and current assets. An adviser will be able to provide you with an updated verbal estimate."]
-          },
-          {
             "tag": "appeal_circumstances",
-            "patterns": ["What are some circumstances that UC Santa Cruz considers for financial aid appeals?", "Can you provide examples of circumstances for which students can appeal their financial aid?", "What are the common situations in which students can request a financial aid appeal?", "How can I appeal my financial aid?"],
-            "responses": ["UC Santa Cruz considers various circumstances for financial aid appeals. Some examples include loss of income due to layoff or loss of employment, major repairs after a natural disaster, high medical costs not covered by insurance, increased educational expenses above the standard budgets, extension of financial aid beyond 15 quarters or regaining eligibility due to extenuating circumstances, dependency status re-evaluations due to adverse home situations, and unforeseen circumstances that prevented on-time submission of documents or financial aid applications. However, certain circumstances such as high mortgage costs, credit card/consumer debt, and discretionary expenses incurred in many households are not considered in the evaluation of eligibility for financial aid.\n To learn more about the appeals that we offer, please visit https://financialaid.ucsc.edu/appeals/appeals/index.html"]
-          },
-          {
-            "tag": "increased_educational_costs_appeal",
-            "patterns": ["How can I request an appeal for increased educational costs?", "What is the process for appealing for additional financial aid due to higher educational expenses?", "Can I submit an appeal if my education-related costs exceed the standard budget?"],
-            "responses": ["If you are incurring education-related expenses that are greater than the cost of attendance budget at UC Santa Cruz, you can request an appeal by contacting the financial aid office. They will assign a 'Cost of Attendance Appeal' task on MyAid Verify. You will need to submit a short statement describing the reason for your budget increase request, along with supporting documentation. The additional expenses must be incurred during your enrollment at UC Santa Cruz. Please note that approved budget increases are generally funded with loans, and the availability of funds may determine the outcome of your appeal. The deadline to submit a budget increase appeal for the current academic year is May 1, 2023. The review and processing of your appeal may take approximately 4-6 weeks."]
-          },
-          {
-            "tag": "increased_educational_costs_documents",
-            "patterns": ["What kind of documentation is required for an appeal based on increased educational costs?", "What documents do I need to submit with my appeal for higher educational expenses?", "Can you provide examples of the documents needed for the budget increase appeal?"],
-            "responses": ["For the evaluation of your appeal based on increased educational costs, acceptable documentation may include receipts, estimates of costs, billing statements, written statements, or other relevant documents. The documentation should clearly demonstrate educationally related expenses that exceed the standard budget allocation. If you are appealing for a computer budget increase, you will need to provide a receipt as a follow-up after aid has been provided for the budget increase."]
-          },
-          {
-            "tag": "increased_educational_costs_expenses",
-            "patterns": ["What types of expenses are generally considered in appeals for increased educational costs?", "Can you provide examples of the education-related expenses that are typically considered in budget increase appeals?", "Which additional expenses can be included in the appeal for higher educational costs?"],
-            "responses": ["UC SantaCruz generally considers various types of expenses in appeals for increased educational costs. These may include rent/mortgage or utilities, transportation expenses, computer purchases, medical, dental, or vision expenses not covered by insurance, special books, course fees, supplies, and childcare expenses. However, to support your appeal, you will need to provide acceptable documentation, such as receipts, estimates of costs, billing statements, or written statements, that clearly demonstrate the educationally related expenses exceeding the standard budget."]
+            "patterns": ["What are some circumstances that UC Santa Cruz considers for financial aid appeals?", "Can you provide examples of circumstances for which students can appeal their financial aid?", "What are the common situations in which students can request a financial aid appeal?", "How can I appeal my financial aid?", "Can I file an appeal to qualify for more aid?"],
+            "responses": ["UC Santa Cruz considers various circumstances for financial aid appeals. Some examples include loss of income due to layoff or loss of employment, major repairs after a natural disaster, high medical costs not covered by insurance, increased educational expenses above the standard budgets, extension of financial aid beyond 15 quarters or regaining eligibility due to extenuating circumstances, dependency status re-evaluations due to adverse home situations, and unforeseen circumstances that prevented on-time submission of documents or financial aid applications. However, certain circumstances such as high mortgage costs, credit card/consumer debt, and discretionary expenses incurred in many households are not considered in the evaluation of eligibility for financial aid.\n To learn more about the appeals that we offer, please visit https://financialaid.ucsc.edu/appeals/appeals"]
           },
           {
             "tag": "global_learning_programs",

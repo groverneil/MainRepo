@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 
-with open("./chat-gpt-intents.json", "r") as infile:
+with open("/Users/neilgrover/Documents/GitFolder/fin_bot_backend/Finbot_model/chat-gpt-intents.json", "r") as infile:
 
     intents = json.load(infile)
 
@@ -38,7 +38,7 @@ for intent in intents["intents"]:
         x.append(token_pattern_sent)
         y.append(tag)
 
-all_words = stem_all(word_list = all_words, ignore_words = ["?", "!", "," ,"."])
+all_words = stem_all(word_list = all_words, ignore_words = ["?", "!", "," ,".", "(", ")"])
 
 # stem all words in the all words list and replace
 
@@ -82,7 +82,7 @@ class ChatDataset(Dataset):
 
         return self.n_samples
     
-batch_size = 10
+batch_size = 5
 
 output_size = len(tags)
 input_size = len(all_words)
@@ -93,7 +93,7 @@ print("Input, output size, hidden size: ", input_size, output_size, hidden_size)
 
 dataset = ChatDataset()
 
-num_epochs = 1000
+num_epochs = 700
 
 train_loader = DataLoader(dataset=dataset, batch_size = batch_size, shuffle=True, num_workers = 0)
 
@@ -138,7 +138,7 @@ data = {
     "tags": tags 
 }
 
-FILE = "./dat.pth"
+FILE = "fin_bot_backend/Finbot_model/dat.pth"
 
 torch.save(data, FILE)
 
