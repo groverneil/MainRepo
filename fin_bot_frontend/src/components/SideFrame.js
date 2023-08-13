@@ -2,10 +2,9 @@ import "./SideCompStyles.css"
 import { useState, useRef, useEffect } from "react";
 import React from "react";
 import axios from "axios"
-import logo from "../logo.png"
 import chatLogo from "../chatbotLogo.png"
 import subIcon from "../submit.png"
-import clearIcon from "../clearIcon.svg"
+import clearIcon from "../clearIcon.png"
 import chatBotIcon from "../chatbotIcon.png"
 import userIcon from "../userbotIcon.png"
 import downScroll from "../downScroll.png"
@@ -13,7 +12,7 @@ import downScroll from "../downScroll.png"
 export const SideFrame = () => {
 
     const [isChatActive, setChatActive] = useState(false)
-    const [exit, isExit] = useState(0)
+    const [chatDisplay, setChatDisplay] = useState("none")
 
     const activateChat = () => {
 
@@ -27,9 +26,9 @@ export const SideFrame = () => {
         var scroller = document.getElementById("scroller");
         var modal = document.getElementsByClassName("modal")[0];
 
-        window.style.animation = "slideRight 0.5s";
-        scroller.style.animation = "slideRight 0.5s";
-        modal.style.animation = "fadeOut 0.5s";
+        window.style.animation = "slideRight 0.7s";
+        scroller.style.animation = "slideRight 0.7s";
+        modal.style.animation = "fadeOut 0.7s";
 
         window.addEventListener("animationend", () => {
 
@@ -38,6 +37,7 @@ export const SideFrame = () => {
             setChatActive(false)
           });
     }
+
 
     const [x, setX] = useState([])
 
@@ -68,19 +68,69 @@ export const SideFrame = () => {
     }
     }
 
-    const OnClear = (e) => {
+    const OnClear = async (e) => {
 
         e.preventDefault()
 
-        axios.post("/reset", {}).then(
+        const users = document.querySelectorAll('.sideUser');
+
+        if (users.length == 0) {
+
+            return;
+        }
+
+        const chats = document.querySelectorAll('.sideChatbot');
+        const lastChat = users[0];
+        const intro = document.getElementsByClassName("intro")[0];
+        var chat = chats[0];
+        var delay = 1;
+
+        intro.style.animation = "fadeIn 2s";
+        intro.style.display = "none";
+
+        users.forEach((user, index) => {
+
+            user.style.animation = "test";
+            user.style.animationDuration = delay + "s";
+            chat = chats[index];
+
+            delay += 0.3;
+
+            chat.style.animation = "test";
+            chat.style.animationDuration = delay + "s";
+
+            delay += 0.3;
+        });
+
+        let scroll_to_bottom = document.getElementById('window');
+        scroll_to_bottom.scroll({ top: 0, behavior: 'smooth' });
+
+        lastChat.addEventListener("animationend", () => {
+
+            users.forEach(user => {
+
+                user.style.display = "none";
+                
+            });
+    
+            chats.forEach(chat => {
+    
+                chat.style.display = "none";
+                
+            });
+
+            axios.post("/reset", {}).then(
             
-            data => {
+                data => {
+    
+                  setX([])
+                }
+            )
 
-              setX([])
-            }
-
-        )
+            intro.style.display = "block";
         
+        })
+  
      }
 
     const scrollDown = (e) => {
@@ -117,7 +167,9 @@ export const SideFrame = () => {
                     <div className="deActivContainer">
                         <button className="closeButton" onClick={deactivateChat}>X</button>
                     </div>
-
+                    <div>
+                        {/* Placeholder for the links button */}
+                    </div>
                     <div className="sideScrollDown" id = "scroller">
                         <button>
                             <img src = {downScroll} onClick={scrollDown}/>
@@ -126,42 +178,49 @@ export const SideFrame = () => {
                 
                 <div id = "window" className="sideChat">
 
-                    <div className="sideChatbot">
+                    <div>
 
-                        <div>
+                        <div className="intro">
+
                             <div>
-                                <img src={chatBotIcon}/>
-                            </div>
-                                <div>
-                                    <p>Hello, welcome to the UCSC financial aid office chatbot. How may I be of assistance to you today?</p>
-                                    <p></p>
-                                </div>
-                        </div>
-                    </div>
-
-                    {conversations.map((conversation) => (
-                        <div key={conversation.id}>
-                            <div className="sideUser">
-                                <div>
-                                    <img src={userIcon}/>
-                                </div>
-                                <p>{conversation.you}</p>
-                            </div>
-                            <div className="sideChatbot">
                                 <div>
                                     <img src={chatBotIcon}/>
                                 </div>
-                                    {conversation.Chatbot.split('\n').map( (it, i) => <div key={'x'+i}><p>{it}</p></div>)}
+                                    <div>
+                                        <p>Hello, welcome to the UCSC financial aid office chatbot. How may I be of assistance to you today?</p>
+                                        <p></p>
+                                    </div>
                             </div>
                         </div>
-                    ))}
+
+                        {conversations.map((conversation) => (
+                            <div key={conversation.id}>
+                                <div className="sideUser">
+                                    <div>
+                                        <img src={userIcon}/>
+                                    </div>
+                                    <p>{conversation.you}</p>
+                                </div>
+                                <div className="sideChatbot">
+                                    <div>
+                                        <img src={chatBotIcon}/>
+                                    </div>
+                                        {conversation.Chatbot.split('\n').map( (it, i) => <div key={'x'+i}><p>{it}</p></div>)}
+                                </div>
+                            </div>
+                        ))}
+                        </div>
                     </div>
 
                     <div className="sideFrame">
                         <form onSubmit={ReqHandler}>
                             <input type="text" ref={userRef}/>
-                            <input type="image" src={subIcon}/>
-                            <input type="image" src={clearIcon} onClick={OnClear}/>
+                            <button className="emptyButton">
+                                <img src={subIcon} className="submitter"></img>
+                            </button>
+                            <button className="emptyButton" onClick={OnClear}>
+                                <img src={clearIcon} className="resetter"></img>
+                            </button>
                         </form>
                     </div>
                 </div>

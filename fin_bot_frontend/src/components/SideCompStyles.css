@@ -22,7 +22,7 @@ button.activator {
     position: absolute;
     bottom: 0;
     right: 0;
-    animation: fadeIn 0.75s;
+    animation: fadeInDelay 1s;
     margin-bottom: 20px;
     margin-right: 2vw;
     z-index: 9;
@@ -31,6 +31,12 @@ button.activator {
 button.activator img {
 
     width: 125px;
+    transition: all 1s ease-in-out;
+}
+
+button.activator img:hover {
+
+    transform: scale(1.15);
 }
 
 .sideScrollDown {
@@ -119,15 +125,21 @@ input[type=text] {
 
 }
 
-input[type=image] {
-
-    height: 30px;
+  /* remove the input focus blue box, it will be in the wrong place. */
+input:focus {
+    outline: none;
+}
+  
+/* Add the focus effect to the form so it contains the button */
+form:focus-within { 
+    outline: 1px solid grey;
 }
 
 .sideChat {
 
     height: 420px;
     overflow-y: scroll;
+    overflow-x: hidden;
 
 }
 
@@ -182,6 +194,64 @@ div.sideChatbot img{
     margin: 5% 3%;
 }
 
+div.intro {
+    overflow:auto;
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    animation: fadeIn 1s;
+    background-color: rgba(209, 209, 209, 0.644);
+}
+
+div.intro p {
+
+    width: 60%;
+    margin: 5% 15% 2% 5%;
+    float: right;
+
+}
+
+div.intro img{
+
+    float: left;
+    width:10%;
+    margin: 5% 3%;
+}
+
+button.emptyButton {
+
+    all: unset;
+}
+
+button.emptyButton img{
+
+    width: 25px;
+    padding: 5px;
+}
+
+button.emptyButton img.submitter:hover{
+
+    content: url("../submit-hover.png");
+}
+
+button.emptyButton img.resetter:hover{
+
+    content: url("../hovClearIcon.png");
+}
+
+@keyframes fadeIn {
+
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes fadeInDelay {
+
+    0% {opacity: 0}
+    30% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
 @keyframes slideLeft {
 
     from {right: -100px; opacity: 0;}
@@ -191,11 +261,28 @@ div.sideChatbot img{
 @keyframes slideRight {
 
     from {right: 0px; opacity: 1;}
-    to {right: -100px; opacity: 0;}
+    to {right: -300px; opacity: 0;}
 }
 
 @keyframes fadeOut {
 
     from {opacity: 1;}
     to {opacity: 0;}
+}
+
+@keyframes test {
+
+    100% {
+
+        opacity: 0;
+        margin-left: 85%;
+    }
+}
+
+@keyframes grow {
+
+    100% {
+
+        scale: 1.1;
+    }
 }
