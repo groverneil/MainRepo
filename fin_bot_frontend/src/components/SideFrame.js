@@ -164,17 +164,20 @@ export const SideFrame = () => {
             {isChatActive && <div className="SideChat">
                 <div className="modal" onClick={deactivateChat}></div>
                 <div className="sideChatWindow" id="mainBlock">
-                    <div className="deActivContainer">
-                        <button className="closeButton" onClick={deactivateChat}>X</button>
-                    </div>
-                    <div>
-                        {/* Placeholder for the links button */}
-                    </div>
-                    <div className="sideScrollDown" id = "scroller">
-                        <button>
-                            <img src = {downScroll} onClick={scrollDown}/>
-                        </button>
-                    </div>
+
+                <div className="sideMenu"> 
+                        <div className="linkContainer">
+                            <button className="closeButton">L</button>
+                        </div>
+                        <div className="sideScrollDown" id = "scroller">
+                            <button>
+                                <img src = {downScroll} onClick={scrollDown}/>
+                            </button>
+                        </div>
+                        <div className="deActivContainer">
+                            <button className="closeButton" onClick={deactivateChat}>X</button>
+                        </div>
+                </div>
                 
                 <div id = "window" className="sideChat">
 
@@ -209,7 +212,9 @@ export const SideFrame = () => {
                                 </div>
                             </div>
                         ))}
+
                         </div>
+                        
                     </div>
 
                     <div className="sideFrame">
