@@ -238,40 +238,32 @@ export const SideFrame = () => {
 
     }
 
-    function auto_grow(element) {
-        element.style.height = "5px";
-        element.style.height = (element.scrollHeight) + "px";
-    }
+    const textareaSubEnter = (e) => {
 
-    useEffect ( () => { 
+            console.log("???")
     
-    if (isChatActive) {
-
-        var inputer = document.getElementById("autoAdjustInput")
-
-        if (inputer) {
+            if (isChatActive) {
         
-            inputer.addEventListener("keydown", (e) => {
+                var inputer = document.getElementById("autoAdjustInput")
+        
+                if (inputer) {
 
-            inputer.style.height = "5px";
-            inputer.style.height = (inputer.scrollHeight) + "px";
+                    if(e.keyCode == 13 && e.shiftKey == false) {
+                        
+                        e.preventDefault();
+                        specialRequest(inputer)
+                        inputer.style.height = "30px"
+                    
+                    } else {
 
+                        inputer.style.height = "5px";
+                        inputer.style.height = (inputer.scrollHeight) + "px";
 
-            if (e.key == "Enter") {
-
-                if (inputer.value !== "") {
-
-                    specialRequest(inputer)
-
-                    inputer.style.height = "30px"
+                    }
+        
                 }
             }
-
-        });
-
     }
-    }
-    }, [isChatActive])
 
 
     useEffect(() => {
@@ -362,7 +354,7 @@ export const SideFrame = () => {
 
                     <div className="sideFrame">
                         <form id="mainForm" onSubmit={ReqHandler}>
-                            <textarea placeholder="Your question here..." spellCheck="true" id="autoAdjustInput" ref={userRef}/>
+                            <textarea placeholder="Your question here..." spellCheck="true" id="autoAdjustInput" ref={userRef} onKeyDown={textareaSubEnter}/>
                             <button className="emptyButton">
                                 <img src={subIcon} className="submitter"></img>
                             </button>
