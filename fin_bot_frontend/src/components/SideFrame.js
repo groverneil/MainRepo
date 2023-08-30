@@ -8,11 +8,12 @@ import clearIcon from "../clearIcon.png"
 import chatBotIcon from "../chatbotIcon.png"
 import userIcon from "../userbotIcon.png"
 import downScroll from "../downScroll.png"
+import linkIcon from "../link.png"
 
 export const SideFrame = () => {
 
     const [isChatActive, setChatActive] = useState(false)
-    const [chatDisplay, setChatDisplay] = useState("none")
+    const [chatDisplay, setChatDisplay] = useState("chat")
 
     const activateChat = () => {
 
@@ -35,6 +36,7 @@ export const SideFrame = () => {
             window.style.display = "none";
             modal.style.display = "none"
             setChatActive(false)
+            setChatDisplay("chat")
           });
     }
 
@@ -66,11 +68,37 @@ export const SideFrame = () => {
             userRef.current.value = "";
 
     }
+    
+    }
+
+    async function specialRequest(input) {
+
+        if (userRef.current.value !== "") {
+
+            const article = { title: input.value };
+            await axios.post('/handle_data', article)
+            .then( response => {
+
+                setX(response.data)
+            })
+
+
+            await axios.get("/handle_data")
+            .then((response) => {
+
+                setX(response.data)
+            });
+
+            userRef.current.value = ""
+
+        }
     }
 
     const OnClear = async (e) => {
 
         e.preventDefault()
+
+        if (chatDisplay === "chat") {
 
         const users = document.querySelectorAll('.sideUser');
 
@@ -119,6 +147,7 @@ export const SideFrame = () => {
                 
             });
 
+
             axios.post("/reset", {}).then(
             
                 data => {
@@ -130,6 +159,18 @@ export const SideFrame = () => {
             intro.style.display = "block";
         
         })
+
+        } else {
+
+            axios.post("/reset", {}).then(
+            
+                data => {
+    
+                  setX([])
+                }
+            )
+            
+        }
   
      }
 
@@ -138,6 +179,100 @@ export const SideFrame = () => {
         let scroll_to_bottom = document.getElementById('window');
 		scroll_to_bottom.scroll({ top: scroll_to_bottom.scrollHeight, behavior: 'smooth' });
     }
+
+    const changeDisplay = () => {
+
+        if (chatDisplay === "chat") {
+
+            var intro = document.getElementsByClassName("intro")[0]
+
+            const users = document.querySelectorAll('.sideUser')
+
+            if (users.length == 0) {
+
+                intro.style.animation = "fadeOut 0.5s"
+
+                intro.addEventListener("animationend", () => {
+    
+                    intro.style.display = "none"
+                    setChatDisplay("links")
+    
+                })
+    
+            } else {
+
+
+                const chats = document.querySelectorAll('.sideChatbot')
+                var currChat = "none"
+
+                intro.style.animation = "fadeOut 0.5s"
+
+                users.forEach((user, index) => {
+
+                    currChat = chats[index]
+                    user.style.animation = "fadeOut 0.5s"
+                    currChat.style.animation = "fadeOut 0.5s"
+                })
+
+                intro.addEventListener("animationend", () => {
+    
+                    intro.style.display = "none"
+                    setChatDisplay("links")
+
+                    users.forEach((user, index) => {
+
+                        currChat = chats[index]
+                        user.style.display = "none"
+                        currChat.style.display = "none"
+                    })
+    
+                })
+
+            }
+            
+        
+        } else {
+
+            setChatDisplay("chat")
+        }
+
+    }
+
+    function auto_grow(element) {
+        element.style.height = "5px";
+        element.style.height = (element.scrollHeight) + "px";
+    }
+
+    useEffect ( () => { 
+    
+    if (isChatActive) {
+
+        var inputer = document.getElementById("autoAdjustInput")
+
+        if (inputer) {
+        
+            inputer.addEventListener("keydown", (e) => {
+
+            inputer.style.height = "5px";
+            inputer.style.height = (inputer.scrollHeight) + "px";
+
+
+            if (e.key == "Enter") {
+
+                if (inputer.value !== "") {
+
+                    specialRequest(inputer)
+
+                    inputer.style.height = "30px"
+                }
+            }
+
+        });
+
+    }
+    }
+    }, [isChatActive])
+
 
     useEffect(() => {
 
@@ -166,8 +301,10 @@ export const SideFrame = () => {
                 <div className="sideChatWindow" id="mainBlock">
 
                 <div className="sideMenu"> 
-                        <div className="linkContainer">
-                            <button className="closeButton">L</button>
+                        <div id = "changeDisplay" className="sideScrollDown">
+                            <button onClick={changeDisplay}>
+                                <img id = "changeDisplayImg" src = {chatDisplay === "chat" ? linkIcon : chatLogo}/>
+                            </button>
                         </div>
                         <div className="sideScrollDown" id = "scroller">
                             <button>
@@ -181,7 +318,7 @@ export const SideFrame = () => {
                 
                 <div id = "window" className="sideChat">
 
-                    <div>
+                    {chatDisplay === "chat" && <div>
 
                         <div className="intro">
 
@@ -213,13 +350,19 @@ export const SideFrame = () => {
                             </div>
                         ))}
 
-                        </div>
+                        </div>}
+
+                        {chatDisplay === "links" && <div>
+
+                            <p>This is where the links would go</p>
+
+                        </div>}
                         
                     </div>
 
                     <div className="sideFrame">
-                        <form onSubmit={ReqHandler}>
-                            <input type="text" ref={userRef}/>
+                        <form id="mainForm" onSubmit={ReqHandler}>
+                            <textarea placeholder="Your question here..." spellCheck="true" id="autoAdjustInput" ref={userRef}/>
                             <button className="emptyButton">
                                 <img src={subIcon} className="submitter"></img>
                             </button>
