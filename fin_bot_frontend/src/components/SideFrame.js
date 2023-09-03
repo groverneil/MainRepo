@@ -98,11 +98,14 @@ export const SideFrame = () => {
 
         e.preventDefault()
 
-        if (chatDisplay === "chat") {
+        if (chatDisplay !== "chat") {
+
+            await setChatDisplay("chat")
+        }
 
         const users = document.querySelectorAll('.sideUser');
 
-        if (users.length == 0) {
+        if (users.length === 0) {
 
             return;
         }
@@ -159,18 +162,6 @@ export const SideFrame = () => {
             intro.style.display = "block";
         
         })
-
-        } else {
-
-            axios.post("/reset", {}).then(
-            
-                data => {
-    
-                  setX([])
-                }
-            )
-            
-        }
   
      }
 
@@ -205,13 +196,13 @@ export const SideFrame = () => {
                 const chats = document.querySelectorAll('.sideChatbot')
                 var currChat = "none"
 
-                intro.style.animation = "fadeOut 0.5s"
+                intro.style.animation = "fadeOut 0.3s"
 
                 users.forEach((user, index) => {
 
                     currChat = chats[index]
-                    user.style.animation = "fadeOut 0.5s"
-                    currChat.style.animation = "fadeOut 0.5s"
+                    user.style.animation = "fadeOut 0.3s"
+                    currChat.style.animation = "fadeOut 0.3s"
                 })
 
                 intro.addEventListener("animationend", () => {
@@ -233,14 +224,33 @@ export const SideFrame = () => {
         
         } else {
 
-            setChatDisplay("chat")
+            const linkTags = document.querySelectorAll(".linkTag");
+
+            if (linkTags.length === 0) {
+
+                setChatDisplay("chat")
+
+            } else {
+
+                linkTags.forEach((link) => {
+                    link.style.animation = "fadeOut 0.3s"
+                })
+
+                linkTags[0].addEventListener("animationend", () => {
+
+                    linkTags.forEach((link) => {
+                        link.style.display = "none"
+                    })
+                
+                    setChatDisplay("chat")
+                })
+            
+            }
         }
 
     }
 
     const textareaSubEnter = (e) => {
-
-            console.log("???")
     
             if (isChatActive) {
         
@@ -346,7 +356,22 @@ export const SideFrame = () => {
 
                         {chatDisplay === "links" && <div>
 
-                            <p>This is where the links would go</p>
+                        {conversations.map(conversation => {
+
+                            console.log(conversation.link_tag[0] === "")
+                            
+                            if (conversation.link_tag[0] !== "") {
+
+
+                            return <div key={conversation.id} className="linkTag">
+                                <div className="linkConv">
+
+                                    <a href={conversation.link} target="_blank">{conversation.link_tag}</a>
+                                </div>
+                            </div>
+                            }
+                            
+                        })}
 
                         </div>}
                         

@@ -275,6 +275,30 @@ button.emptyButton img.resetter:hover{
     content: url("../hovClearIcon.png");
 }
 
+div.linkConv {
+
+    width: 99%;
+    height: auto;
+    padding: 50px 20px;
+    margin-bottom: 10px;
+    background-color: rgb(222, 222, 220);
+    animation: fadeIn 0.5s;
+}
+
+div.linkConv a {
+
+    text-decoration: none;
+    font-family: "Poppins";
+    font-size: 14px;
+    color: rgb(4, 44, 136);
+}
+
+div.linkConv a:hover {
+
+    font-weight: bolder;
+}
+
+
 @keyframes fadeIn {
 
     0% {opacity: 0;}
