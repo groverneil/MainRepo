@@ -5,13 +5,12 @@ import axios from "axios"
 import chatLogo from "../chatbotLogo.png"
 import subIcon from "../submit.png"
 import clearIcon from "../clearIcon.png"
-import chatBotIcon from "../chatbotIcon.png"
-import userIcon from "../userbotIcon.png"
-import downScroll from "../downScroll.png"
 import linkIcon from "../link.png"
 import SideMenu from "./SideMenu";
+import MessageBody from "./MessagesBody";
+import LinksBody from "./LinksBody";
 
-export const SideFrame = () => {
+const SideFrame = () => {
 
     const [isChatActive, setChatActive] = useState(false)
     const [chatDisplay, setChatDisplay] = useState("chat")
@@ -341,96 +340,16 @@ export const SideFrame = () => {
                 <div className="sideChatWindow" id="mainBlock">
 
                 <SideMenu changeDisplay={changeDisplay} chatDisplay={chatDisplay} linkVal={linkVal} scrollDown={scrollDown} deactivateChat={deactivateChat}/>
-
-                {/* <div className="sideMenu"> 
-                        <div id = "changeDisplay" className="linker">
-                            <button onClick={changeDisplay}>
-                                <img id = "changeDisplayImg" src = {chatDisplay === "chat" ? linkIcon : chatLogo}/>
-                            </button>
-                        </div>
-                        {linkVal > 0 && <div className="linkCounter">{linkVal}</div>}
-                        <div className="sideScrollDown" id = "scroller">
-                            <button>
-                                <img src = {downScroll} onClick={scrollDown}/>
-                            </button>
-                        </div>
-                        <div className="deActivContainer">
-                            <button className="closeButton" onClick={deactivateChat}>X</button>
-                        </div>
-                </div> */}
                 
                 <div id = "window" className="sideChat">
 
-                    {chatDisplay === "chat" && <div>
+                    {chatDisplay === "chat" && <MessageBody conversations={conversations}/>}
 
-                        <div className="intro">
-
-                            <div>
-                                <div>
-                                    <img src={chatBotIcon}/>
-                                </div>
-                                    <div>
-                                        <p>Hello, welcome to the UCSC financial aid office chatbot. How may I be of assistance to you today?</p>
-                                        <p></p>
-                                    </div>
-                            </div>
-                        </div>
-
-                        {conversations.map((conversation) => (
-                            <div key={conversation.id}>
-                                <div className="sideUser">
-                                    <div>
-                                        <img src={userIcon}/>
-                                    </div>
-                                    <p>{conversation.you}</p>
-                                </div>
-                                <div className="sideChatbot">
-                                    <div>
-                                        <img src={chatBotIcon}/>
-                                    </div>
-                                        {conversation.Chatbot.split('\n').map( (it, i) => <div key={'x'+i}><p>{it}</p></div>)}
-                                </div>
-                            </div>
-                        ))}
-
-                        </div>}
-
-                        {chatDisplay === "links" && <div>
-
-                        {linkVal === 0 && <div className="intro">
-
-                            <div>
-                                <div>
-                                    <img src={linkIcon}/>
-                                </div>
-                                    <div>
-                                        <p>This is where you can view your links!</p>
-                                        <p></p>
-                                    </div>
-                            </div>
-                        </div>}
-
-                        {conversations.map(conversation => {
-
-                            console.log(conversation.link_tag[0] === "")
-                            
-                            if (conversation.link_tag[0] !== "") {
-
-                            return <div key={conversation.id} className="linkTag">
-                                <div className="linkConv">
-
-                                    <a href={conversation.link} target="_blank">{conversation.link_tag}</a>
-                                </div>
-                            </div>
-                            }
-                            
-                        })}
-
-                        </div>}
+                    {chatDisplay === "links" && <LinksBody conversations={conversations}/>}
                         
-                    </div>
+                </div>
 
-                    <div className="sideFrame">
+                <div className="sideFrame">
                         <form id="mainForm" onSubmit={ReqHandler}>
                             <textarea placeholder="Your question here..." spellCheck="true" id="autoAdjustInput" ref={userRef} onKeyDown={textareaSubEnter}/>
                             <button className="emptyButton">
