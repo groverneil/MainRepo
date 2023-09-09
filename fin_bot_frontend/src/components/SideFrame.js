@@ -9,11 +9,13 @@ import chatBotIcon from "../chatbotIcon.png"
 import userIcon from "../userbotIcon.png"
 import downScroll from "../downScroll.png"
 import linkIcon from "../link.png"
+import SideMenu from "./SideMenu";
 
 export const SideFrame = () => {
 
     const [isChatActive, setChatActive] = useState(false)
     const [chatDisplay, setChatDisplay] = useState("chat")
+    const [linkVal, setLinkVal] = useState(0)
 
     const activateChat = () => {
 
@@ -97,6 +99,8 @@ export const SideFrame = () => {
     const OnClear = async (e) => {
 
         e.preventDefault()
+
+        setLinkVal(0)
 
         if (chatDisplay !== "chat") {
 
@@ -210,6 +214,14 @@ export const SideFrame = () => {
                     intro.style.display = "none"
                     setChatDisplay("links")
 
+                    if (linkVal > 0) {
+
+                        document.getElementsByClassName("linkCounter")[0].style.display = "none"
+        
+                        setLinkVal(0)
+        
+                    }
+
                     users.forEach((user, index) => {
 
                         currChat = chats[index]
@@ -224,23 +236,35 @@ export const SideFrame = () => {
         
         } else {
 
-            const linkTags = document.querySelectorAll(".linkTag");
+            const linkTags = document.querySelectorAll(".linkTag")
+            const intro = document.getElementsByClassName("intro")[0]
 
             if (linkTags.length === 0) {
 
-                setChatDisplay("chat")
+                intro.style.animation = "fadeOut 0.5s"
+
+                intro.addEventListener("animationend", () => {
+                    
+                    intro.style.display = "none"
+                    setChatDisplay("chat")
+
+                })
 
             } else {
 
+                intro.style.animation = "fadeOut 0.5s"
+
                 linkTags.forEach((link) => {
-                    link.style.animation = "fadeOut 0.3s"
+                    link.style.animation = "fadeOut 0.5s"
                 })
 
-                linkTags[0].addEventListener("animationend", () => {
+                intro.addEventListener("animationend", () => {
 
                     linkTags.forEach((link) => {
                         link.style.display = "none"
                     })
+
+                    document.getElementsByClassName("intro")[0].style.display = "none"
                 
                     setChatDisplay("chat")
                 })
@@ -259,6 +283,11 @@ export const SideFrame = () => {
                 if (inputer) {
 
                     if(e.keyCode == 13 && e.shiftKey == false) {
+
+                        if (chatDisplay !== "chat") {
+
+                            setChatDisplay("chat")
+                        }
                         
                         e.preventDefault();
                         specialRequest(inputer)
@@ -285,6 +314,15 @@ export const SideFrame = () => {
 
         }
 
+        if (conversations.length > 0) {
+
+            if (conversations[conversations.length-1]["link"][0] !== "") {
+
+                setLinkVal(linkVal+0.5)
+            }
+
+        }
+
     }, [x])
 
     const conversations = Array.from(x)
@@ -302,12 +340,15 @@ export const SideFrame = () => {
                 <div className="modal" onClick={deactivateChat}></div>
                 <div className="sideChatWindow" id="mainBlock">
 
-                <div className="sideMenu"> 
-                        <div id = "changeDisplay" className="sideScrollDown">
+                <SideMenu changeDisplay={changeDisplay} chatDisplay={chatDisplay} linkVal={linkVal} scrollDown={scrollDown} deactivateChat={deactivateChat}/>
+
+                {/* <div className="sideMenu"> 
+                        <div id = "changeDisplay" className="linker">
                             <button onClick={changeDisplay}>
                                 <img id = "changeDisplayImg" src = {chatDisplay === "chat" ? linkIcon : chatLogo}/>
                             </button>
                         </div>
+                        {linkVal > 0 && <div className="linkCounter">{linkVal}</div>}
                         <div className="sideScrollDown" id = "scroller">
                             <button>
                                 <img src = {downScroll} onClick={scrollDown}/>
@@ -316,7 +357,7 @@ export const SideFrame = () => {
                         <div className="deActivContainer">
                             <button className="closeButton" onClick={deactivateChat}>X</button>
                         </div>
-                </div>
+                </div> */}
                 
                 <div id = "window" className="sideChat">
 
@@ -356,12 +397,24 @@ export const SideFrame = () => {
 
                         {chatDisplay === "links" && <div>
 
+                        {linkVal === 0 && <div className="intro">
+
+                            <div>
+                                <div>
+                                    <img src={linkIcon}/>
+                                </div>
+                                    <div>
+                                        <p>This is where you can view your links!</p>
+                                        <p></p>
+                                    </div>
+                            </div>
+                        </div>}
+
                         {conversations.map(conversation => {
 
                             console.log(conversation.link_tag[0] === "")
                             
                             if (conversation.link_tag[0] !== "") {
-
 
                             return <div key={conversation.id} className="linkTag">
                                 <div className="linkConv">
