@@ -4,6 +4,7 @@ import Projects from "./projects";
 import NavigationBar from "../Components/nav";
 import Scroll1 from "../Pics/scroll_1.png"
 import Scroll2 from "../Pics/scrol_2.png"
+import Scroll3 from "../Pics/experience.jpeg"
 
 
 function Main() {
@@ -20,6 +21,11 @@ function Main() {
             <div>
                 <img src={Scroll2} alt = "Scroll2" id = "scrl1"/>
                 <div className="twi_2">Projects</div>
+            </div>
+            <Projects/>
+            <div>
+                <img src={Scroll3} alt = "Scroll3" id = "scrl1"/>
+                <div className="twi_3">Work Experience</div>
             </div>
             <Projects/>
             <About/>

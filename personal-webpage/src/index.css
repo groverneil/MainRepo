@@ -93,8 +93,7 @@ div.main-container h2 {
 
 #scrl1 {
 
-  width: 99vw;
-  
+  width: 100vw;
 }
 
 div.content_container {
@@ -149,6 +148,20 @@ div.image-container {
   margin-bottom: -9%;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+.twi_3 {
+
+  position: relative;
+  top: 10%;
+  left: 30%;
+  transform: translate(-10%, -280%);
+  color: rgb(231, 255, 236);
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  font-size: 8vw;
+  margin-bottom: -9%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 
 div.image-container_proj {
 
