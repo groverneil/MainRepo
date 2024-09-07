@@ -11,7 +11,7 @@ body {
 
 .about_main {
 
-  width: 99vw;
+  width: 100vw;
   display: flex;
   background-color: rgb(48, 48, 48);
 }
@@ -31,12 +31,12 @@ h1 {
 div.navig {
 
   display: block;
-  width: 99vw;
+  width: 100vw;
   border: 1px solid black;
   position: sticky;
   top: 0;
   z-index: 999;
-  background-color: rgb(0, 255, 255);
+  background-color: rgb(104, 82, 245);
 }
 
 div.navig ul {
@@ -60,7 +60,7 @@ div.navig ul li a {
 
   text-decoration: none;
   font-size: 20px;
-  color: navy;
+  color: rgb(0, 0, 83);
 }
 
 div.navig ul li a:hover {
@@ -71,7 +71,7 @@ div.navig ul li a:hover {
 
 div.main-container {
 
-  width: 92%;
+  width: 93%;
   background-color:rgb(240, 251, 252);
   text-align: left;
   margin: 2.5%;
