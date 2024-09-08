@@ -14,7 +14,7 @@ function ProjectContainer(props){
             */}
             {props.presentation
             ?
-            <div>
+            <div className="present">
                 <iframe 
                 src="https://docs.google.com/presentation/d/1TiIlbI5TDcXfKcH7oDqx8n0WW34SQdqzGStZ75isNvE/embed?start=false&loop=false&delayms=3000" 
                 title="FASO Presentation"

@@ -95,6 +95,22 @@ div .copy {
     }
 }
 
+@media (max-width: 768px) {
+
+    .sm_container {
+
+        width: 20%;
+        height: 5vh;
+        gap: 2%;
+    }
+
+    div .pic {
+
+        width: 7vw;
+    }
+
+}
+
 
 
 

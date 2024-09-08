@@ -51,7 +51,7 @@ div.navig ul li{
 
   display: inline;
   font-size: 20px;
-  padding: 8vw;
+  padding: 4vw;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
@@ -229,4 +229,42 @@ div.image-container_proj img {
     width: 82%;
   }
 
+}
+
+@media (max-width: 768px) {
+
+  .present {
+
+    display: block;
+    transform: scale(0.75);
+  }
+
+  div.navig ul li {
+
+    padding: 1vw;
+  }
+  
+}
+
+@media (max-width: 600px) {
+
+  .present {
+
+    display: block;
+    transform: scale(0.5);
+  }
+
+  div.navig ul li {
+
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .present {
+
+    display: block;
+    transform: scale(0.30);
+  }
 }
