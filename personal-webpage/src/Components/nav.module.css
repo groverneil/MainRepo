@@ -52,30 +52,38 @@
     color: rgb(12, 97, 149);
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
+/* Prevent body scrolling when menu is open */
+.no-scroll {
+    overflow: hidden;
+}
 
+@media (max-width: 768px) {
     .navig {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
         overflow-x: hidden;
     }
 
     .hamburger {
-        display: block; /* Show the hamburger button */
+        display: block;
     }
 
     .navLinks {
-        display: block; /* Ensure the navLinks are displayed as block for the transition */
-        max-height: 0; /* Initially hidden */
-        overflow: hidden; /* Hide content that overflows */
+        max-height: 0;
+        display: block;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out; /* Smooth transition */
+    }   
+
+    .navItem {
+        display: block;
+        padding: 1rem 0;
     }
 
     .open {
-        max-height: 500px; /* Adjust as needed to fit your content; should be greater than the content's height */
-    }
-
-    .navItem {
-        width: 100%;
-        padding: 1rem 0;
-        text-align: center;
+        max-height: 500px; /* Set to a value greater than the content's height */
     }
 }

@@ -15,15 +15,22 @@ function NavigationBar() {
         e.preventDefault();
         const targetId = e.target.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
+    
         if (targetElement) {
+            // Calculate the offset for smooth scrolling
             const headerOffset = navRef.current ? navRef.current.offsetHeight : 0;
-            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerOffset;
+            const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+    
             window.scrollTo({
-                top: elementPosition - headerOffset,
+                top: elementPosition,
                 behavior: 'smooth'
             });
+    
+            // Ensure the menu closes after clicking a link
             if (isOpen) {
-                toggleMenu(); // Close menu after clicking on a link
+                setTimeout(() => {
+                    toggleMenu();
+                }, 300); // Wait until the scroll is complete (match with your smooth scroll duration)
             }
         }
     };
