@@ -20,12 +20,12 @@ function Main() {
             </div>
             <HomePage/>
             <div id="projId">
-                <img src={Scroll2} alt = "Scroll2" id = "scrl1"/>
+                <img src={Scroll2} alt = "Scroll2" id = "scrl2"/>
                 <div className="twi_2">Projects</div>
             </div>
             <Projects/>
             <div id="jobs">
-                <img src={Scroll3} alt = "Scroll3" id = "scrl1"/>
+                <img src={Scroll3} alt = "Scroll3" id = "scrl3"/>
                 <div className="twi_3">Work Experience</div>
             </div>
             <Jobs/>
