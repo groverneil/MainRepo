@@ -1,16 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from './nav.module.css'; // Import the CSS module
 
 function NavigationBar() {
     const [isOpen, setIsOpen] = useState(false);
+    const navRef = useRef(null);
 
     // Function to toggle menu open/close state
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
+    // Function to adjust scroll position
+    const handleScroll = (e) => {
+        e.preventDefault();
+        const targetId = e.target.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            const headerOffset = navRef.current ? navRef.current.offsetHeight : 0;
+            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: elementPosition - headerOffset,
+                behavior: 'smooth'
+            });
+            if (isOpen) {
+                toggleMenu(); // Close menu after clicking on a link
+            }
+        }
+    };
+
     return (
-        <nav className={styles.navig} aria-label="Main Navigation">
+        <nav ref={navRef} className={styles.navig} aria-label="Main Navigation">
             {/* Hamburger menu button */}
             <button className={styles.hamburger} onClick={toggleMenu} aria-label="Toggle Menu">
                 &#9776; {/* Unicode character for the hamburger icon */}
@@ -18,9 +37,15 @@ function NavigationBar() {
             
             {/* Conditionally render the menu based on the isOpen state */}
             <ul className={`${styles.navLinks} ${isOpen ? styles.open : ''}`}>
-                <li className={styles.navItem}><a href="#scrl1" className={styles.navLink} onClick={isOpen ? toggleMenu : ""}>About</a></li>
-                <li className={styles.navItem}><a href="#scrl2" className={styles.navLink} onClick={isOpen ? toggleMenu : ""}>Projects</a></li>
-                <li className={styles.navItem}><a href="#scrl3" className={styles.navLink} onClick={isOpen ? toggleMenu : ""}>Work Experience</a></li>
+                <li className={styles.navItem}>
+                    <a href="#scrl1" className={styles.navLink} onClick={handleScroll}>About</a>
+                </li>
+                <li className={styles.navItem}>
+                    <a href="#scrl2" className={styles.navLink} onClick={handleScroll}>Projects</a>
+                </li>
+                <li className={styles.navItem}>
+                    <a href="#scrl3" className={styles.navLink} onClick={handleScroll}>Work Experience</a>
+                </li>
             </ul>
         </nav>
     );
