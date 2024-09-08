@@ -54,6 +54,11 @@
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
+
+    .navig {
+        overflow-x: hidden;
+    }
+
     .hamburger {
         display: block; /* Show the hamburger button */
     }
