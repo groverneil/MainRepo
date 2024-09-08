@@ -17,7 +17,7 @@ function NavigationBar() {
         const targetElement = document.getElementById(targetId);
         if (targetElement) {
             const headerOffset = navRef.current ? navRef.current.offsetHeight : 0;
-            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerOffset;
             window.scrollTo({
                 top: elementPosition - headerOffset,
                 behavior: 'smooth'
