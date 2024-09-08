@@ -87,3 +87,11 @@
         max-height: 500px; /* Set to a value greater than the content's height */
     }
 }
+
+@media (max-width: 425px) {
+    
+    .navig {
+        width: 90vw;
+    }
+    
+}
