@@ -288,11 +288,6 @@ div.image-container_proj img {
 
 @media (max-width: 400px) {
 
-  body {
-
-    overflow-x: hidden;
-  }
-
   .present {
 
     display: block;
