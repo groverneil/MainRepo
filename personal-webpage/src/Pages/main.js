@@ -13,8 +13,8 @@ function Main() {
     return (
 
         <div>
-            <NavigationBar/>
             <span id="scrl1"></span>
+            <NavigationBar/>
             <div>
                 <img src={Scroll1} alt = "Scroll1" id = "sec1"/>
                 <div className="twi_1">About Me</div>
