@@ -253,6 +253,8 @@ div.image-container_proj img {
   div.main-container {
 
     overflow: hidden;
+    padding-left: 0vw;
+    padding-right: 2vw;
   }
   
 }
