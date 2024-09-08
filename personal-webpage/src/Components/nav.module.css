@@ -61,7 +61,7 @@
     .navLinks {
       display: none; /* Hide the navigation links by default */
       flex-direction: column;
-      background-color: rgb(252, 241, 16);
+      background-color: rgb(104, 82, 245);
       position: absolute;
       top: 3.5rem; /* Adjust according to button size */
       width: 100%;
