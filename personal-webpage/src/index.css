@@ -241,6 +241,7 @@ div.image-container_proj img {
 
     display: block;
     transform: scale(0.75);
+    margin-top: -9vh;
   }
 
   div.navig ul li {
