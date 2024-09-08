@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: white;
@@ -241,7 +245,7 @@ div.image-container_proj img {
 
   div.navig ul li {
 
-    padding: 1vw;
+    padding: 3vw;
   }
   
 }
