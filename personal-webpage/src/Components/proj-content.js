@@ -9,9 +9,18 @@ function ProjectContainer(props){
                 <h2>{props.title}</h2>
                 <p>{props.content}</p>
             </div>
+            {/* 
+            If you have a presentation flag as TRUE use that else use the image
+            */}
+            {props.presentation
+            ?
+            <div>
+            </div> 
+            :
             <div className="image-container_proj">
             <img src={props.pic} alt="Tis moi" />
             </div>
+            }
         </div>
     )
     
