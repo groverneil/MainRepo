@@ -245,7 +245,9 @@ div.image-container_proj img {
 
   div.navig ul li {
 
-    padding: 3vw;
+    padding: 2vw;
+    display: block;
+    text-align: center;
   }
   
 }
@@ -261,6 +263,8 @@ div.image-container_proj img {
   div.navig ul li {
 
     display: block;
+    font-size: 18px;
+    padding: 1.5rem 0;
   }
 }
 

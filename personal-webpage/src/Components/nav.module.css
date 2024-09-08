@@ -1,0 +1,85 @@
+/* Navigation bar container styles */
+.navig {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: rgb(104, 82, 245);
+    padding: 0.5rem 0;
+  }
+  
+  /* Hamburger button styles */
+  .hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Unordered list styles */
+  .navLinks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* List item styles */
+  .navItem {
+    display: inline-block;
+    font-size: 20px;
+    padding: 0 2vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  /* Anchor link styles */
+  .navLink {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(0, 0, 83);
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for links */
+  .navLink:hover {
+    color: rgb(12, 97, 149);
+  }
+  
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block; /* Show the hamburger button */
+    }
+  
+    .navLinks {
+      display: none; /* Hide the navigation links by default */
+      flex-direction: column;
+      background-color: rgb(252, 241, 16);
+      position: absolute;
+      top: 3.5rem; /* Adjust according to button size */
+      width: 100%;
+      left: 0;
+      padding: 0;
+      margin: 0;
+      transition: max-height 0.4s ease-out;
+    }
+  
+    .open {
+      display: flex; /* Show menu when open */
+    }
+  
+    .navItem {
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+    }
+  
+  }
+  
