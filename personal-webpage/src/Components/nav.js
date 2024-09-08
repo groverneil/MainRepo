@@ -18,9 +18,9 @@ function NavigationBar() {
             
             {/* Conditionally render the menu based on the isOpen state */}
             <ul className={`${styles.navLinks} ${isOpen ? styles.open : ''}`}>
-                <li className={styles.navItem}><a href="#scrl1" className={styles.navLink} onClick={toggleMenu}>About</a></li>
-                <li className={styles.navItem}><a href="#projId" className={styles.navLink} onClick={toggleMenu}>Projects</a></li>
-                <li className={styles.navItem}><a href="#jobs" className={styles.navLink} onClick={toggleMenu}>Work Experience</a></li>
+                <li className={styles.navItem}><a href="#scrl1" className={styles.navLink} onClick={isOpen ? toggleMenu : ""}>About</a></li>
+                <li className={styles.navItem}><a href="#projId" className={styles.navLink} onClick={isOpen ? toggleMenu : ""}>Projects</a></li>
+                <li className={styles.navItem}><a href="#jobs" className={styles.navLink} onClick={isOpen ? toggleMenu : ""}>Work Experience</a></li>
             </ul>
         </nav>
     );
