@@ -276,6 +276,11 @@ div.image-container_proj img {
 
 @media (max-width: 400px) {
 
+  html {
+
+    overflow-x: hidden;
+  }
+
   .present {
 
     display: block;
