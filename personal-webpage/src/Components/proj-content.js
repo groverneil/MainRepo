@@ -15,6 +15,15 @@ function ProjectContainer(props){
             {props.presentation
             ?
             <div>
+                <iframe 
+                src="https://docs.google.com/presentation/d/1TiIlbI5TDcXfKcH7oDqx8n0WW34SQdqzGStZ75isNvE/embed?start=false&loop=false&delayms=3000" 
+                title="FASO Presentation"
+                frameborder="0" 
+                width="960" 
+                height="569" 
+                allowfullscreen="true" 
+                mozallowfullscreen="true" 
+                webkitallowfullscreen="true"></iframe>
             </div> 
             :
             <div className="image-container_proj">
