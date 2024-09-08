@@ -14,18 +14,21 @@ function Main() {
 
         <div>
             <NavigationBar/>
+            <span id="scrl1"></span>
             <div>
-                <img src={Scroll1} alt = "Scroll1" id = "scrl1"/>
+                <img src={Scroll1} alt = "Scroll1" id = "sec1"/>
                 <div className="twi_1">About Me</div>
             </div>
             <HomePage/>
+            <span id="scrl2"></span>
             <div id="projId">
-                <img src={Scroll2} alt = "Scroll2" id = "scrl2"/>
+                <img src={Scroll2} alt = "Scroll2" id = "sec2"/>
                 <div className="twi_2">Projects</div>
             </div>
             <Projects/>
+            <span id="scrl3"></span>
             <div id="jobs">
-                <img src={Scroll3} alt = "Scroll3" id = "scrl3"/>
+                <img src={Scroll3} alt = "Scroll3" id = "sec3"/>
                 <div className="twi_3">Work Experience</div>
             </div>
             <Jobs/>
