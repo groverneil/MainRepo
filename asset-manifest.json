@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MainRepo/static/css/main.d19e67d0.css",
-    "main.js": "/MainRepo/static/js/main.17b58cea.js",
+    "main.js": "/MainRepo/static/js/main.3ce4fafe.js",
     "static/media/pexels-vlada-karpovich-4452380.jpg": "/MainRepo/static/media/pexels-vlada-karpovich-4452380.349193bfbc94fa5c7a97.jpg",
     "static/media/Screenshot 2022-12-22 at 6.05.22 PM.png": "/MainRepo/static/media/Screenshot 2022-12-22 at 6.05.22 PM.32aa0d460cec8fbb718f.png",
     "static/media/scrol_2.png": "/MainRepo/static/media/scrol_2.6f9417d0c03b9063bfcf.png",
@@ -14,10 +14,10 @@
     "static/media/experience.jpeg": "/MainRepo/static/media/experience.c47bf5f1061fe08e2c19.jpeg",
     "index.html": "/MainRepo/index.html",
     "main.d19e67d0.css.map": "/MainRepo/static/css/main.d19e67d0.css.map",
-    "main.17b58cea.js.map": "/MainRepo/static/js/main.17b58cea.js.map"
+    "main.3ce4fafe.js.map": "/MainRepo/static/js/main.3ce4fafe.js.map"
   },
   "entrypoints": [
     "static/css/main.d19e67d0.css",
-    "static/js/main.17b58cea.js"
+    "static/js/main.3ce4fafe.js"
   ]
 }
