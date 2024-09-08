@@ -255,6 +255,11 @@ div.image-container_proj img {
     display: block;
     text-align: center;
   }
+
+  div.main-container {
+
+    overflow: hidden;
+  }
   
 }
 
