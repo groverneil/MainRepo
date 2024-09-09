@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/MainRepo/static/css/main.e9333e35.css",
+    "main.css": "/MainRepo/static/css/main.9417e901.css",
     "main.js": "/MainRepo/static/js/main.d50598c2.js",
     "static/media/pexels-vlada-karpovich-4452380.jpg": "/MainRepo/static/media/pexels-vlada-karpovich-4452380.349193bfbc94fa5c7a97.jpg",
     "static/media/Screenshot 2022-12-22 at 6.05.22 PM.png": "/MainRepo/static/media/Screenshot 2022-12-22 at 6.05.22 PM.32aa0d460cec8fbb718f.png",
@@ -13,11 +13,11 @@
     "static/media/Gmail-logo.png": "/MainRepo/static/media/Gmail-logo.d765005ce9d4caa3d69e.png",
     "static/media/experience.jpeg": "/MainRepo/static/media/experience.c47bf5f1061fe08e2c19.jpeg",
     "index.html": "/MainRepo/index.html",
-    "main.e9333e35.css.map": "/MainRepo/static/css/main.e9333e35.css.map",
+    "main.9417e901.css.map": "/MainRepo/static/css/main.9417e901.css.map",
     "main.d50598c2.js.map": "/MainRepo/static/js/main.d50598c2.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9333e35.css",
+    "static/css/main.9417e901.css",
     "static/js/main.d50598c2.js"
   ]
 }
