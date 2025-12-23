@@ -1,7 +1,5 @@
 import ContentBox from "../Components/content-b";
 import ME from '../Pics/NEIL-PIC.jpeg';
-import ReactLogo from '../Pics/react-logo.png';
-import porPic from '../Pics/pexels-vlada-karpovich-4452380.jpg';
 import SkillsSlideshow from "../Components/skillsSlideshow";
 
 
