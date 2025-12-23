@@ -1,0 +1,108 @@
+.skills-slideshow {
+  background: #fff; /* Match main-container */
+  color: #1a1a2e;   /* Match text color from h2 in main-container */
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 2rem;              /* Match main-container */
+  margin: 2rem auto;
+  width: 90%;                 /* Match main-container */
+  max-width: 1200px;          /* Match main-container */
+  height: 340px;
+  text-align: center;
+  position: relative;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skills-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space arrows to far sides */
+  margin-bottom: 1rem;
+  min-height: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.2em 0.6em;
+  border-radius: 50%;
+  transition: color 0.2s, background 0.2s, opacity 0.2s;
+  opacity: 0; /* Hidden by default */
+  pointer-events: none; /* Prevent tabbing/clicking when hidden */
+}
+
+.skills-header:hover .arrow {
+  opacity: 1; /* Show on hover */
+  pointer-events: auto;
+}
+
+.arrow:hover {
+  color: #fff;
+  background: #667eea;
+}
+
+.category-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #4b3fa7; /* Accent color, adjust as needed */
+  margin: 0 auto;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 0.2em;
+  text-shadow: 0 2px 8px rgba(102, 126, 234, 0.08);
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  height: 120px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  gap: 0.5rem 1.5rem;
+  justify-items: center;
+  align-items: start;
+  overflow-y: auto;
+}
+
+.skills-list li {
+  font-size: 1.05rem;
+  margin: 0.2rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+.skills-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.tab-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #61dafb;
+  opacity: 0.5;
+  display: inline-block;
+  cursor: pointer;
+  transition: opacity 0.2s, background 0.2s;
+}
+.tab-dot.active {
+  opacity: 1;
+  background: #fff;
+  border: 2px solid #61dafb;
+}
