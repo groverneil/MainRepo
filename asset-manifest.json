@@ -1,12 +1,10 @@
 {
   "files": {
     "main.css": "/MainRepo/static/css/main.6593c885.css",
-    "main.js": "/MainRepo/static/js/main.92ea0ad3.js",
-    "static/media/pexels-vlada-karpovich-4452380.jpg": "/MainRepo/static/media/pexels-vlada-karpovich-4452380.349193bfbc94fa5c7a97.jpg",
+    "main.js": "/MainRepo/static/js/main.3ae8e030.js",
     "static/media/appIcon.png": "/MainRepo/static/media/appIcon.409c76bfc8869687472b.png",
     "static/media/Screenshot 2022-12-22 at 6.05.22 PM.png": "/MainRepo/static/media/Screenshot 2022-12-22 at 6.05.22 PM.32aa0d460cec8fbb718f.png",
     "static/media/scrol_2.png": "/MainRepo/static/media/scrol_2.6f9417d0c03b9063bfcf.png",
-    "static/media/react-logo.png": "/MainRepo/static/media/react-logo.a99beb1708034bca2ae5.png",
     "static/media/scroll_1.png": "/MainRepo/static/media/scroll_1.8f8a7e1866c3ca07b3fd.png",
     "static/media/rune-eff-img.jpg": "/MainRepo/static/media/rune-eff-img.f0ab33b8b4de2743f7ec.jpg",
     "static/media/handshake-logo.png": "/MainRepo/static/media/handshake-logo.d62246f175b4fc6a9e15.png",
@@ -15,10 +13,10 @@
     "static/media/Gmail-logo.png": "/MainRepo/static/media/Gmail-logo.d765005ce9d4caa3d69e.png",
     "index.html": "/MainRepo/index.html",
     "main.6593c885.css.map": "/MainRepo/static/css/main.6593c885.css.map",
-    "main.92ea0ad3.js.map": "/MainRepo/static/js/main.92ea0ad3.js.map"
+    "main.3ae8e030.js.map": "/MainRepo/static/js/main.3ae8e030.js.map"
   },
   "entrypoints": [
     "static/css/main.6593c885.css",
-    "static/js/main.92ea0ad3.js"
+    "static/js/main.3ae8e030.js"
   ]
 }
