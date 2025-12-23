@@ -1,17 +1,28 @@
-//This is the maon navigation for the website.
+//This is the main navigation for the website.
+import { useState } from 'react';
 
 function NavigationBar () {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+    const closeMenu = () => {
+        setIsOpen(false);
+    };
 
     return (
-
         <div className="navig">
-            <ul>
-                <li><a href="#scrl1">About</a></li>
-                <li><a href="#projId">Projects</a></li>
-                <li><a href="#end">Contact Me</a></li>
-
-                {/* These link tags make sense once we look at App.js.
-                That file defines the string that is used in the 'to' attributes. */}
+            <button className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu} aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul className={isOpen ? 'nav-open' : ''}>
+                <li><a href="#scrl1" onClick={closeMenu}>About</a></li>
+                <li><a href="#scrl2" onClick={closeMenu}>Projects</a></li>
+                <li><a href="#end" onClick={closeMenu}>Contact Me</a></li>
             </ul>
         </div>
     );

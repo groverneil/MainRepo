@@ -13,13 +13,13 @@ function Main() {
         <div>
             <NavigationBar/>
             <div>
-                <img src={Scroll1} alt = "Scroll1" id = "scrl1"/>
+                <img src={Scroll1} alt = "Scroll1" id = "scrl1" className="scroll-target"/>
                 <div className="twi_1">About Me</div>
             </div>
             <HomePage/>
             <div>
-                <img src={Scroll2} alt = "Scroll2" id = "scrl1"/>
-                <div className="twi_2">Projects</div>
+                <img src={Scroll2} alt = "Scroll2" id = "scrl2" className="scroll-target"/>
+                <div className="twi_1">Projects</div>
             </div>
             <Projects/>
             <About/>

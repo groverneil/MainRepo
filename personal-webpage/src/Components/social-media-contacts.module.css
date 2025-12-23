@@ -1,99 +1,24 @@
 .sm_container {
-
-    width: 10%;
-    display: flex;
-    float: left;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3%;
-    margin-bottom: 3%;
-    gap: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.sm_container:hover {
-
-    background-color: grey;
+.pic {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-
-div .heading {
-
-    width: 15vw;
-    font-weight: 200;
-    font-size: 1.5vw;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.pic:hover {
+  transform: translateY(-4px) scale(1.1);
 }
 
-div .name {
-
-    width: 20vw;
-    font-size: 1.6vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
+@media (max-width: 768px) {
+  .pic {
+    width: 2rem;
+    height: 2rem;
+  }
 }
-
-div .pic {
-
-    width: 5vw;
-    display: flex;
-    align-items: center;
-    padding: 20% 0;
-}
-
-div .copy {
-
-    width: 10vw;
-}
-
-.copy {
-
-    background-color: lightblue;
-    animation: outHover;
-    animation-duration: 1s;
-    border-radius: 50px;
-    height: 4vh;
-}
-
-.copy:hover {
-
-    animation-duration: 0.3s;
-    animation-name: inHover;
-    animation-fill-mode: forwards;
-    
-}
-
-@keyframes inHover {
-
-    to {scale: 1.1; background-color: aquamarine;}
-}
-
-@keyframes outHover {
-
-    to {scale: 1;}
-    
-}
-
-@media (max-width: 1024px) {
-
-    div .heading {
-
-        display: none;
-    }
-
-    div .name {
-
-        font-size: 2vw;
-    }
-
-    div .copy {
-
-        width: 15vw;
-    }
-}
-
-
-
-
