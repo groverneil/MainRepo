@@ -206,14 +206,8 @@ div.main-container h2 {
   scroll-margin-top: 50px;
 }
 
-#scrl1 {
-
-  width: 99vw;
-  
-}
-
-#scrl2 {
-  width: 99vw;
+#scrl1, #scrl2, #scrl3 {
+  scroll-margin-top: 50px;
 }
 
 div.content_container {
@@ -252,30 +246,48 @@ div.image-container img {
   border-radius: 12px;
 }
 
-.twi_1 {
-
+.section-banner {
   position: relative;
-  top: 20%;
-  left: 50%;
-  transform: translate(-12%, -238%);
-  color: rgb(231, 255, 236);
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-  font-size: 8vw;
-  margin-bottom: -9%;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
 }
 
-.twi_2 {
+.section-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-  position: relative;
-  top: 20%;
+.section-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  pointer-events: none;
+}
+
+.section-title {
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translate(-12%, -238%);
-  color: rgb(231, 255, 236);
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-  font-size: 8vw;
-  margin-bottom: -9%;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 7vw;
+  font-weight: 700;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  z-index: 1;
 }
 
 div.image-container_proj {

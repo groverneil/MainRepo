@@ -13,19 +13,19 @@ function Main() {
 
         <div>
             <NavigationBar/>
-            <div>
-                <img src={Scroll1} alt = "Scroll1" id = "scrl1" className="scroll-target"/>
-                <div className="twi_1">About Me</div>
+            <div className="section-banner" id="scrl1">
+                <img src={Scroll1} alt="Scroll1" className="scroll-target"/>
+                <div className="section-title">About Me</div>
             </div>
             <HomePage/>
-            <div>
-                <img src={Scroll2} alt = "Scroll2" id = "scrl2" className="scroll-target"/>
-                <div className="twi_1">Experience</div>
+            <div className="section-banner" id="scrl2">
+                <img src={Scroll2} alt="Scroll2" className="scroll-target"/>
+                <div className="section-title">Experience</div>
             </div>
             <Experience/>
-            <div>
-                <img src={Scroll1} alt = "Scroll3" id = "scrl3" className="scroll-target"/>
-                <div className="twi_1">Projects</div>
+            <div className="section-banner" id="scrl3">
+                <img src={Scroll1} alt="Scroll3" className="scroll-target"/>
+                <div className="section-title">Projects</div>
             </div>
             <Projects/>
             <About/>
