@@ -21,7 +21,8 @@ function NavigationBar () {
             </button>
             <ul className={isOpen ? 'nav-open' : ''}>
                 <li><a href="#scrl1" onClick={closeMenu}>About</a></li>
-                <li><a href="#scrl2" onClick={closeMenu}>Projects</a></li>
+                <li><a href="#scrl2" onClick={closeMenu}>Experience</a></li>
+                <li><a href="#scrl3" onClick={closeMenu}>Projects</a></li>
                 <li><a href="#end" onClick={closeMenu}>Contact Me</a></li>
             </ul>
         </div>

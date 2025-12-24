@@ -1,6 +1,7 @@
 import HomePage from "./homepg";
 import About from "./about";
 import Projects from "./projects";
+import Experience from "./experience";
 import NavigationBar from "../Components/nav";
 import Scroll1 from "../Pics/scroll_1.png"
 import Scroll2 from "../Pics/scrol_2.png"
@@ -19,6 +20,11 @@ function Main() {
             <HomePage/>
             <div>
                 <img src={Scroll2} alt = "Scroll2" id = "scrl2" className="scroll-target"/>
+                <div className="twi_1">Experience</div>
+            </div>
+            <Experience/>
+            <div>
+                <img src={Scroll1} alt = "Scroll3" id = "scrl3" className="scroll-target"/>
                 <div className="twi_1">Projects</div>
             </div>
             <Projects/>

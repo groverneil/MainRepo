@@ -1,20 +1,22 @@
 function ExpBox(props) {
   return (
-    <div className="main-container exp-block">
-      <div className="exp-banner">
-        <span className="exp-title">{props.title}</span> <span className="exp-company">@ {props.organization}</span>
-        <span className="exp-dates">{props.dates}</span>
+    <div className="main-container">
+      <div className="content_container_proj">
+        <h2>{props.title} <span className="exp-company">@ {props.organization}</span></h2>
+        <p className="exp-dates">{props.dates}</p>
+        <p>{props.content}</p>
       </div>
-      <div className="content_container_proj exp_content">
-        <ul>
-          {props.details.map((point, idx) => (
-            <li key={idx}>{point}</li>
-          ))}
-        </ul>
-        <div className="exp-bar">
-          <div className="level" style={{width: props.level + '%'}}></div>
+      {props.media && (
+        <div className="image-container_proj">
+          {props.mediaType === 'video' ? (
+            <video autoPlay loop muted playsInline>
+              <source src={props.media} type="video/mp4" />
+            </video>
+          ) : (
+            <img src={props.media} alt={props.organization + ' logo'} />
+          )}
         </div>
-      </div>
+      )}
     </div>
   );
 }
