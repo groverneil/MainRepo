@@ -18,6 +18,17 @@
   justify-content: center;
 }
 
+.skills-content {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.skills-content.fading {
+  opacity: 0;
+  transform: translateX(8px);
+}
+
 .skills-header {
   display: flex;
   align-items: center;

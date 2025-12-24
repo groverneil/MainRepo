@@ -57,38 +57,58 @@ const skillsData = [
 
 function SkillsSlideshow() {
 	const [index, setIndex] = useState(0);
+	const [isFading, setIsFading] = useState(false);
 	const timeoutRef = useRef(null);
+	const fadeTimeoutRef = useRef(null);
+	const isFadingRef = useRef(false);
 
-	const nextSlide = () => setIndex((prev) => (prev + 1) % skillsData.length);
-	const prevSlide = () => setIndex((prev) => (prev - 1 + skillsData.length) % skillsData.length);
+	const changeSlide = (newIndexFn) => {
+		if (isFadingRef.current) return; // Prevent rapid clicks during animation
+		isFadingRef.current = true;
+		setIsFading(true);
+		fadeTimeoutRef.current = setTimeout(() => {
+			setIndex(newIndexFn);
+			setIsFading(false);
+			isFadingRef.current = false;
+		}, 300); // Match CSS transition duration
+	};
+
+	const nextSlide = () => changeSlide((prev) => (prev + 1) % skillsData.length);
+	const prevSlide = () => changeSlide((prev) => (prev - 1 + skillsData.length) % skillsData.length);
 
 	useEffect(() => {
 		timeoutRef.current = setTimeout(nextSlide, 3500);
-		return () => clearTimeout(timeoutRef.current);
+		return () => {
+			clearTimeout(timeoutRef.current);
+			clearTimeout(fadeTimeoutRef.current);
+		};
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [index]);
 
 	return (
 		<div className="skills-slideshow">
-			<div className="skills-header">
-				<button className="arrow" onClick={prevSlide}>
-					&#8592;
-				</button>
-				<span className="category-title">{skillsData[index].category}</span>
-				<button className="arrow" onClick={nextSlide}>
-					&#8594;
-				</button>
+			<div className={`skills-content${isFading ? " fading" : ""}`}>
+				<div className="skills-header">
+					<button className="arrow" onClick={prevSlide}>
+						&#8592;
+					</button>
+					<span className="category-title">{skillsData[index].category}</span>
+					<button className="arrow" onClick={nextSlide}>
+						&#8594;
+					</button>
+				</div>
+				<ul className="skills-list">
+					{customOrderSkills(skillsData[index].items).map((skill, i) =>
+						skill ? <li key={i}>{skill}</li> : <li key={i} style={{visibility: "hidden"}}>&nbsp;</li>
+					)}
+				</ul>
 			</div>
-			<ul className="skills-list">
-				{customOrderSkills(skillsData[index].items).map((skill, i) =>
-					skill ? <li key={i}>{skill}</li> : <li key={i} style={{visibility: "hidden"}}>&nbsp;</li>
-				)}
-			</ul>
 			<div className="skills-tabs">
 				{skillsData.map((cat, i) => (
 					<span
 						key={cat.category}
 						className={`tab-dot${i === index ? " active" : ""}`}
-						onClick={() => setIndex(i)}
+						onClick={() => changeSlide(() => i)}
 					/>
 				))}
 			</div>
