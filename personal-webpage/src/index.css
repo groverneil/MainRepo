@@ -287,6 +287,39 @@ div.image-container_proj {
   border-radius: 12px;
 }
 
+div.image-container_proj a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+div.image-container_proj a::after {
+  content: 'View Project →';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
+}
+
+div.image-container_proj a:hover::after {
+  opacity: 1;
+}
+
 div.image-container_proj img {
   width: 100%;
   height: 100%;
@@ -295,7 +328,7 @@ div.image-container_proj img {
   transition: transform 0.5s ease;
 }
 
-div.image-container_proj img:hover {
+div.image-container_proj a:hover img {
   transform: scale(1.05);
 }
 

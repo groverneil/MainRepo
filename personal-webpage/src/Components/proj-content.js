@@ -10,7 +10,13 @@ function ProjectContainer(props){
                 <p>{props.content}</p>
             </div>
             <div className="image-container_proj">
-            <img src={props.pic} alt="Tis moi" />
+                {props.link ? (
+                    <a href={props.link} target="_blank" rel="noopener noreferrer">
+                        <img src={props.pic} alt={props.title} />
+                    </a>
+                ) : (
+                    <img src={props.pic} alt={props.title} />
+                )}
             </div>
         </div>
     )
