@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/MainRepo/static/css/main.b7be2608.css",
+    "main.css": "/MainRepo/static/css/main.e8b2bdad.css",
     "main.js": "/MainRepo/static/js/main.b9b057c1.js",
     "static/media/t2m_mp4.mp4": "/MainRepo/static/media/t2m_mp4.104c30e6e5ac28e4ee3b.mp4",
     "static/media/appIcon.png": "/MainRepo/static/media/appIcon.409c76bfc8869687472b.png",
@@ -15,11 +15,11 @@
     "static/media/Gmail-logo.png": "/MainRepo/static/media/Gmail-logo.d765005ce9d4caa3d69e.png",
     "static/media/dabbl_logo.webp": "/MainRepo/static/media/dabbl_logo.2ae1924f831f88e94607.webp",
     "index.html": "/MainRepo/index.html",
-    "main.b7be2608.css.map": "/MainRepo/static/css/main.b7be2608.css.map",
+    "main.e8b2bdad.css.map": "/MainRepo/static/css/main.e8b2bdad.css.map",
     "main.b9b057c1.js.map": "/MainRepo/static/js/main.b9b057c1.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7be2608.css",
+    "static/css/main.e8b2bdad.css",
     "static/js/main.b9b057c1.js"
   ]
 }
