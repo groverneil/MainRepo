@@ -45,7 +45,7 @@
   color: #667eea;
   font-size: 2rem;
   cursor: pointer;
-  padding: 0.2em 0.6em;
+  padding: 10% 0.6em;
   border-radius: 50%;
   transition: color 0.2s, background 0.2s, opacity 0.2s;
   opacity: 0; /* Hidden by default */
@@ -58,8 +58,7 @@
 }
 
 .arrow:hover {
-  color: #fff;
-  background: #667eea;
+  color: #3c5ce8;
 }
 
 .category-title {
