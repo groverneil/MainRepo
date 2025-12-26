@@ -4,7 +4,7 @@ import GmailLogo from '../Pics/Gmail-logo.png'
 import HandshakeLogo from '../Pics/handshake-logo.png'
 import GitLogo from '../Pics/gitlogo.png'
 
-function About(){
+function ContactPage(){
 
     return (
 
@@ -22,4 +22,4 @@ function About(){
     );
 }
 
-export default About;
+export default ContactPage;

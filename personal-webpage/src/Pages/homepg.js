@@ -3,7 +3,7 @@ import ME from '../Pics/NEIL-PIC.jpeg';
 import SkillsSlideshow from "../Components/skillsSlideshow";
 
 
-function HomePage(){
+function AboutPage(){
 
     return (
 
@@ -18,4 +18,4 @@ function HomePage(){
     );
 }
 
-export default HomePage;
+export default AboutPage;
