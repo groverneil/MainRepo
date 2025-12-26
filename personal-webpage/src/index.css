@@ -221,7 +221,7 @@ div.content_container {
 }
 
 div.content_container_proj {
-  width: 45%;
+  width: 55%;
   text-align: left;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 1rem;
@@ -291,7 +291,7 @@ div.image-container img {
 }
 
 div.image-container_proj {
-  width: 55%;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -332,8 +332,8 @@ div.image-container_proj a:hover::after {
 }
 
 div.image-container_proj img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: cover;
   border-radius: 12px;
   transition: transform 0.5s ease;
@@ -342,9 +342,6 @@ div.image-container_proj img {
 div.image-container_proj a:hover img {
   transform: scale(1.05);
 }
-
-
-
 
 @media (max-width: 1024px) {
 
@@ -403,7 +400,7 @@ div.image-container_proj a:hover img {
 }
 
 #expId .image-container_proj img {
-  width: 60%;
+  width: 50%;
   height: auto;
   object-fit: contain;
 }

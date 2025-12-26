@@ -10,7 +10,7 @@
   object-fit: contain;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin: 0.5rem 5rem;
+  margin: 0.2rem 5rem;
 }
 
 .pic:hover {
