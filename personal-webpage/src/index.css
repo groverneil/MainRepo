@@ -272,6 +272,22 @@ div.image-container img {
   border-radius: 12px;
 }
 
+div.image-container-personal {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+div.image-container-personal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 .section-banner {
   position: relative;
   width: 100%;
@@ -358,8 +374,8 @@ div.image-container_proj a:hover::after {
 }
 
 div.image-container_proj img {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 12px;
   transition: transform 0.5s ease;
@@ -377,6 +393,11 @@ div.image-container_proj a:hover img {
   }
 
   div.image-container {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  div.image-container-personal {
     width: 100%;
     margin-top: 1rem;
   }

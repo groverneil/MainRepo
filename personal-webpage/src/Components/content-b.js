@@ -1,7 +1,7 @@
 
 function ContentBox (props){
 
-    // This component box is gping be used on the homepage.
+    // This component box is going to be used on the homepage.
 
     return (
 
@@ -10,7 +10,7 @@ function ContentBox (props){
                 <h2>{props.title}</h2>
                 <p>{props.content}</p>
             </div>
-            <div className="image-container">
+            <div className={props.isPersonal ? "image-container-personal" : "image-container"}>
             <img src={props.pic} alt="Tis moi" />
             </div>
         </div>
