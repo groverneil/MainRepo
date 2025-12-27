@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/MainRepo/static/css/main.3f93605b.css",
+    "main.css": "/MainRepo/static/css/main.215374bb.css",
     "main.js": "/MainRepo/static/js/main.e02b1295.js",
     "static/media/NEIL-PIC.png": "/MainRepo/static/media/NEIL-PIC.aec027bc25f71e451cac.png",
     "static/media/t2m_mp4.mp4": "/MainRepo/static/media/t2m_mp4.104c30e6e5ac28e4ee3b.mp4",
@@ -15,11 +15,11 @@
     "static/media/Gmail-logo.png": "/MainRepo/static/media/Gmail-logo.d765005ce9d4caa3d69e.png",
     "static/media/dabbl_logo.webp": "/MainRepo/static/media/dabbl_logo.2ae1924f831f88e94607.webp",
     "index.html": "/MainRepo/index.html",
-    "main.3f93605b.css.map": "/MainRepo/static/css/main.3f93605b.css.map",
+    "main.215374bb.css.map": "/MainRepo/static/css/main.215374bb.css.map",
     "main.e02b1295.js.map": "/MainRepo/static/js/main.e02b1295.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f93605b.css",
+    "static/css/main.215374bb.css",
     "static/js/main.e02b1295.js"
   ]
 }
